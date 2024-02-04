@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="grocerylist/templates/styles.css">
+    <style>
+    body {
+      font-family: 'Quicksand', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+  }
+  
+  nav {
+      background-color: #3BB77E;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  .branding {
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .logo {
+      color: #fff;
+      margin: 0;
+  }
+  
+  .slogan {
+      color: #fff;
+      margin: 5px 0;
+      font-size: 14px;
+  }
+  
+  .search-bar {
+      display: flex;
+      align-items: center;
+  }
+  
+  .search-bar input {
+      padding: 8px;
+      margin-right: 0px;
+      border: none;
+  }
+  
+  .search-button {
+      padding: 8px;
+      border: none;
+      background-color: #D9D9D9;
+      display: flex;
+      align-items: center;
+  }
+  
+  .search-button img {
+      margin: 0 auto;
+  }
+  
+  .nav-links {
+      display: flex;
+  }
+  
+  nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 5px;
+      transition: background-color 0.3s;
+  }
+  
+  nav a:hover {
+      background-color: #d2efe1;
+  }
+  </style>
+</head>
+<body>
+
+<!--<div class="container">
+  <ul class="nav bg-info">
+    <li class="nav-item">
+      <a class="nav-link link-light" href="/grocerylist">Shopping</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="/recipes">Recipes</a>
+    </li>
+  </ul>
+  <form class="d-flex" role="search">
+    <input class="form-control me-2" name="q" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
+
+  {% block content %}
+  {% endblock %}
+  
+</div>-->
+
+<nav>
+  <div class="branding">
+      <h1 class="logo">Easy EBT</h1>
+      <p class="slogan">EBT grocery and recipe finder</p>
+  </div>
+  <form class="search-bar" role="search"> <!-- Use a form element -->
+      <input type="text" name="q" type="search" placeholder="Search" style="width: 300px;">
+      <!--<button type="submit" class="search-button"> 
+          <img src="search.png" alt="Search" width="16" height="16">
+      </button>-->
+  </form>
+  <div class="nav-links">
+      <a href="/grocerylist/">Shopping</a>
+      <a href="/recipes">Recipes</a>
+  </div>
+</nav>
+<h1>Grocery List</h1>
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<table>
+  <thead>
+    <tr>
+      <td>Category</td>
+      <td>Name</td>
+      <td>Price</td>
+      <td>Rating</td>
+    </tr>
+  </thead>
+  <tbody>
+    {% for x in mygrocerylist %}
+    <tr>
+      <td>{{ x.type }}</td>
+      <td>{{ x.name }}</td>
+      <td>{{ x.price }}</td>
+      <td>{{ x.rating }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</body>
+</html>

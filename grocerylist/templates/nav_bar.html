@@ -1,0 +1,129 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <div class="branding">
+            <h1 class="logo">Easy EBT</h1>
+            <p class="slogan">EBT grocery and recipe finder</p>
+        </div>
+        <div class="nav-links">
+            <a href="#">Shopping</a>
+            <a href="#">Recipes</a>
+        </div>
+    </nav>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        {% load bootstrap5 %}
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap">
+          <link rel="stylesheet" href="grocerylist/templates/styles.css">
+          <style>
+          body {
+            font-family: 'Quicksand', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav {
+            background-color: #3BB77E;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .branding {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo {
+            color: #fff;
+            margin: 0;
+        }
+        
+        .slogan {
+            color: #fff;
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        
+        .search-bar input {
+            padding: 8px;
+            margin-right: 0px;
+            border: none;
+        }
+        
+        .search-button {
+            padding: 8px;
+            border: none;
+            background-color: #D9D9D9;
+            display: flex;
+            align-items: center;
+        }
+        
+        .search-button img {
+            margin: 0 auto;
+        }
+        
+        .nav-links {
+            display: flex;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: #555;
+        }
+        </style>
+      </head>
+<body>
+
+    <nav>
+        <div class="branding">
+            <h1 class="logo">Easy EBT</h1>
+            <p class="slogan">EBT grocery and recipe finder</p>
+        </div>
+        <form class="search-bar" action="search-results.html" method="GET"> <!-- Use a form element -->
+            <input type="text" name="search" placeholder="Search..." style="width: 300px;">
+            <button type="submit" class="search-button"> <!-- Set type to submit and form attribute -->
+                <img src="search.png" alt="Search" width="16" height="16">
+            </button>
+        </form>
+        <div class="nav-links">
+            <a href="#">Shopping</a>
+            <a href="#">Recipes</a>
+        </div>
+    </nav>
+
+</body>
+</html>
+
