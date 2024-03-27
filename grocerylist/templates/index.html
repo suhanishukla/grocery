@@ -1,133 +1,9 @@
 <!DOCTYPE html>
-
+<!--
 <html>
-<head>
-  <title>{% block title %}{% endblock %}</title>
-  {% load bootstrap5 %}
-  {% bootstrap_css %}
-  {% bootstrap_javascript %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet" href="grocerylist/templates/styles.css">
-    <style>
-    body {
-      font-family: 'Quicksand', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-  }
-  
-  nav {
-      background-color: #3BB77E;
-      color: #fff;
-      padding: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  }
-  
-  .branding {
-      display: flex;
-      flex-direction: column;
-  }
-  
-  .logo {
-      color: #fff;
-      margin: 0;
-  }
-  
-  .slogan {
-      color: #fff;
-      margin: 5px 0;
-      font-size: 14px;
-  }
-  
-  .search-bar {
-      display: flex;
-      align-items: center;
-  }
-  
-  .search-bar input {
-      padding: 8px;
-      margin-right: 0px;
-      border: none;
-  }
-  
-  .search-button {
-      padding: 8px;
-      border: none;
-      background-color: #D9D9D9;
-      display: flex;
-      align-items: center;
-  }
-  
-  .search-button img {
-      margin: 0 auto;
-  }
-  
-  .nav-links {
-      display: flex;
-  }
-  
-  nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 20px;
-      margin: 0 5px;
-      transition: background-color 0.3s;
-  }
-  
-  nav a:hover {
-      background-color: #d2efe1;
-  }
-  </style>
-</head>
 <body>
 
-<!--<div class="container">
-  <ul class="nav bg-info">
-    <li class="nav-item">
-      <a class="nav-link link-light" href="/grocerylist">Shopping</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link link-light" href="/recipes">Recipes</a>
-    </li>
-  </ul>
-  <form class="d-flex" role="search">
-    <input class="form-control me-2" name="q" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success" type="submit">Search</button>
-  </form>
-
-  {% block content %}
-  {% endblock %}
-  
-</div>-->
-
-<nav>
-  <div class="branding">
-      <h1 class="logo">Easy EBT</h1>
-      <p class="slogan">EBT grocery and recipe finder</p>
-  </div>
-  <form class="search-bar" role="search"> <!-- Use a form element -->
-      <input type="text" name="q" type="search" placeholder="Search" style="width: 300px;">
-      <!--<button type="submit" class="search-button"> 
-          <img src="search.png" alt="Search" width="16" height="16">
-      </button>-->
-  </form>
-  <div class="nav-links">
-      <a href="/grocerylist/">Shopping</a>
-      <a href="/recipes">Recipes</a>
-  </div>
-</nav>
 <h1>Grocery List</h1>
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
 <table>
   <thead>
     <tr>
@@ -148,5 +24,197 @@
     {% endfor %}
   </tbody>
 </table>
+</body>
+</html>
+-->
+
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+  <style>
+    .round-table {
+      background: linear-gradient(180deg, rgb(140, 247, 194), #1aa943); /* Blue gradient background */
+      border-radius: 15px; /* Adjust the border-radius as needed */
+      overflow: hidden;
+    }
+
+    .round-table th,
+    .round-table td {
+      border: 1px solid #fff; /* White dividing rows and columns */
+      padding: 10px; /* Adjust padding as needed */
+      text-align: center;
+    }
+    .table-container {
+      max-height: 80vh; /* Set a maximum height for the table container */
+      overflow-y: auto; /* Enable vertical scrollbar */
+    }
+
+    .custom-padding {
+      padding-top: 20px; /* Adjust the padding as needed */
+    }
+
+    .bottom-row {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: lightgray; /* Optional styling */
+    }
+  </style>
+  <script>
+    
+    function calculateCost(){
+      var table = document.getElementById('attributeTable');
+      var rows = table.getElementsByTagName('tr');
+      var sum = 0;
+
+      for (var i = 1; i < rows.length; i++) { // Start from index 1 to skip header row
+        var cells = rows[i].getElementsByTagName('td');
+
+        for (var j = 2; j < cells.length; j++) { // Start from index 1 to skip first column
+          var cellValue = parseFloat(cells[j].textContent.substring(1)) || 0; // Convert to integer, default to 0 if not a valid number
+          sum += cellValue;
+        }
+      }
+
+      var attributeRow = document.createElement('tr');
+      var totalPrice = document.createElement('td');
+      var realPrice = document.createElement('td');
+
+      totalPrice.innerHTML = "Total Price"
+      realPrice.innerHTML = "$"+sum.toFixed(2)
+
+      attributeRow.appendChild(totalPrice);
+      attributeRow.appendChild(realPrice);
+
+      document.querySelector('#attributeTable tbody').appendChild(attributeRow);
+      //alert(sum)
+    }
+    
+    function displayType(){
+      information = showAlert()
+
+      name = information[0]
+      price = information[1]
+
+      var attributeRow = document.createElement('tr');
+      var storeAttritubeElement = document.createElement('td');
+      var itemAttritubeElement = document.createElement('td');
+      var priceAttritubeElement = document.createElement('td');
+
+      storeAttritubeElement.innerHTML = "Walmart"
+      itemAttritubeElement.innerHTML = name
+      priceAttritubeElement.innerHTML = "$"+price
+
+      attributeRow.appendChild(storeAttritubeElement);
+      attributeRow.appendChild(itemAttritubeElement);
+      attributeRow.appendChild(priceAttritubeElement);
+
+      document.querySelector('#attributeTable tbody').appendChild(attributeRow);
+      calculateCost()
+      //alert(type)
+    }
+
+    function showAlert() {
+      var type = document.getElementById("type").innerHTML;
+      var name = document.getElementById("name").innerHTML;
+      var price = document.getElementById("price").innerHTML;
+      price = price.substring(1);
+      //alert(price)
+      var table = document.getElementById('attributeTable')
+      var lastRowIndex = table.rows.length - 1;
+      table.deleteRow(lastRowIndex)
+      return [name,price]
+      //alert('Button Clicked!');
+    }
+    
+  </script>
+</head>
+
+<body>
+
+<div class="container">
+  <ul class="nav bg-info">
+    <li class="nav-item">
+      <a class="nav-link link-light" href="/grocerylist">Shopping</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="/members">Recipes</a>
+    </li>
+  </ul>
+  <form class="d-flex" role="search">
+    <input class="form-control me-2" name="q" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
+
+  {% block content %}
+  {% endblock %}
+  
+</div>
+<h1 class="custom-padding text-center">Grocery List</h1>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <!-- Left half of the page (col-md-6) -->
+    <div class="col-md-6">
+      <div class="table-container">
+        <!-- Content for the left half goes here -->
+        <h2 class="text-center">All Items</h2>
+        <div class="d-flex flex-wrap">
+          {% for item in mygrocerylist %}
+          <div class="p-2 w-25 bd-highlight">
+            <div class="card-body">
+              <!-- <h5 class="card-title">Card title</h5> -->
+              <p class="card-text">
+                <p id="type">{{ item.type }}</p>
+                <p id="name">{{ item.name }}</p>
+                <p id="price">${{ item.price }}</p> <!-- yo add the dolla sign in later-->
+              </p>
+              </script>
+              <button id="copyButton" onclick="displayType()" class="btn btn-primary">Add To Cart</button>
+              
+            </div>  
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Right half of the page (col-md-6) -->
+    <div class="col-md-6">
+      
+      
+      <!-- <button onclick=myFunction()>Click me</button> -->
+      <!-- Content for the right half goes here -->
+      <h2 class="text-center">Shopping Cart</h2>
+
+        <table id="attributeTable" class="table round-table">
+          <thead>
+            <tr>
+              <th scope="col">Store</th>
+              <th scope="col">Item Name</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th colspan= "row"></th>
+              <td colspan="1"></td>
+              <td colspan="1"></td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+
+  </div>
+</div>
+<!-- </div> -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
