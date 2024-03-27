@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Add your custom styles here */
+    .custom-card {
+      width: 300px;
+      border-radius: 15px; /* Adjust the border-radius for desired curve */
+    }
+
+    .custom-card img {
+      width: 100%;
+      max-width: 200px; /* Set the maximum width for the image */
+      height: auto;
+      display: block; /* Center the image horizontally */
+      margin: 0 auto;
+      border-radius: 15px; /* Match the border-radius of the card */
+      padding-top: 10px; /* Add padding to the top of the image */
+    }
+
+    .custom-card .card-body {
+      padding: 10px; /* Adjust the padding for spacing between h5 and p */
+    }
+
+    .custom-card h5 {
+      font-weight: bold; /* Make the h5 element bold */
+      margin-bottom: 0; /* Remove default bottom margin */
+    }
+
+    .custom-card .price {
+      color: green; /* Set the text color to green */
+      display: inline-block; /* Ensure the price and button are in the same row */
+      margin-bottom: 10px; /* Add margin below the price */
+    }
+
+    .custom-card .btn-custom {
+      width: 100%; /* Make the button full width */
+      background-color: blue; /* Set the background color to blue */
+      border-color: blue; /* Set the border color to blue */
+    }
+  </style>
+  <title>Bootstrap Card Example</title>
+</head>
+<body>
+
+<div class="card custom-card">
+  <img src="https://example.com/your-image.jpg" class="card-img-top" alt="Card Image">
+  <div class="card-body">
+    <h5 class="card-title">Card Title</h5>
+    <p class="price">Price: $19.99</p>
+    <a href="#" class="btn btn-custom">Learn More</a>
+    <p class="card-text">This is a simple card example using Bootstrap.</p>
+  </div>
+</div>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
