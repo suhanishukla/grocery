@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+{% include 'nav_bar.html' %}
+<h1>Shopping Cart Page</h1>
+<table>
+  <thead>
+    <tr>
+      <td>Category</td>
+      <td>Name</td>
+      <td>Price</td>
+      <td>Rating</td>
+    </tr>
+  </thead>
+  <tbody>
+    {% for x in mygrocerylist %}
+    <tr>
+      <td>{{ x.type }}</td>
+      <td>{{ x.name }}</td>
+      <td>{{ x.price }}</td>
+      <td>{{ x.rating }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</body>
+</html>

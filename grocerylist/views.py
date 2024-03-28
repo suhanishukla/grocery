@@ -43,11 +43,12 @@ def recipelist(request):
     return HttpResponse(template.render(context, request))
 
 
-#def grocerylist(request): 
-    #mygrocerylist = GroceryList.objects.all().values()
-    #template = loader.get_template('index.html')
-    #context = {
-    #    'mygrocerylist': mygrocerylist,
-    #}
-    #return HttpResponse(template.render(context, request))
-# Create your views here.
+def shoppingCart(request): 
+    template = loader.get_template('cart.html')
+    hide_specific_part = '/cart' in request.path
+    context = {
+       'hide_specific_part': hide_specific_part,
+    }
+    
+    return HttpResponse(template.render(context,request))
+
