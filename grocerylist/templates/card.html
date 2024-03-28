@@ -1,65 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>{% block title %}{% endblock %}</title>
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    /* Add your custom styles here */
-    .custom-card {
+    body {
+    margin: 0;
+    }
+    .card {
       width: 300px;
-      border-radius: 15px; /* Adjust the border-radius for desired curve */
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
-
-    .custom-card img {
+    .card h2 {
+        margin-top: -10px;
+        color: #333;
+    }
+    .card h6 {
+      color: #666;
+    }
+    .card img {
       width: 100%;
-      max-width: 200px; /* Set the maximum width for the image */
-      height: auto;
-      display: block; /* Center the image horizontally */
-      margin: 0 auto;
-      border-radius: 15px; /* Match the border-radius of the card */
-      padding-top: 10px; /* Add padding to the top of the image */
+      border-radius: 5px 5px 5px 5px;
+      margin-bottom: 10px;
     }
-
-    .custom-card .card-body {
-      padding: 10px; /* Adjust the padding for spacing between h5 and p */
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center
     }
+    .card p.price {
+      color: #3BB77E;
 
-    .custom-card h5 {
-      font-weight: bold; /* Make the h5 element bold */
-      margin-bottom: 0; /* Remove default bottom margin */
     }
-
-    .custom-card .price {
-      color: green; /* Set the text color to green */
-      display: inline-block; /* Ensure the price and button are in the same row */
-      margin-bottom: 10px; /* Add margin below the price */
+    .card p.price span.value {
+      font-weight: bold;
+      font-size: 20px; /* Adjust the font size as needed */
     }
-
-    .custom-card .btn-custom {
-      width: 100%; /* Make the button full width */
-      background-color: blue; /* Set the background color to blue */
-      border-color: blue; /* Set the border color to blue */
+    .card p.price span.unit {
+      font-weight: normal;
+    }
+    .add-to-cart-btn {
+      background-color: #3BB77E; /* Bootstrap primary color */
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+    .add-to-cart-btn i {
+      margin-right: 5px;
     }
   </style>
-  <title>Bootstrap Card Example</title>
-</head>
+<head>
+
 <body>
-
-<div class="card custom-card">
-  <img src="https://example.com/your-image.jpg" class="card-img-top" alt="Card Image">
-  <div class="card-body">
-    <h5 class="card-title">Card Title</h5>
-    <p class="price">Price: $19.99</p>
-    <a href="#" class="btn btn-custom">Learn More</a>
-    <p class="card-text">This is a simple card example using Bootstrap.</p>
-  </div>
-</div>
-
-<!-- Bootstrap JS and Popper.js -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <div class="card">
+        <img src="{{ image_source }}" alt="Placeholder Image">
+        <div>
+            <h6>{{ category }}</h6>
+            <h2>{{ product_name }}</h2>
+            <div class="container">
+                <p class="price"><span class="value">$<span>{{ price }}</span></span> <span class="unit">{{ unit }}</span> </p>
+                <a href="#" class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i>Add</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
