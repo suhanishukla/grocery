@@ -1,33 +1,4 @@
 <!DOCTYPE html>
-<!--
-<html>
-<body>
-
-<h1>Grocery List</h1>
-<table>
-  <thead>
-    <tr>
-      <td>Category</td>
-      <td>Name</td>
-      <td>Price</td>
-      <td>Rating</td>
-    </tr>
-  </thead>
-  <tbody>
-    {% for x in mygrocerylist %}
-    <tr>
-      <td>{{ x.type }}</td>
-      <td>{{ x.name }}</td>
-      <td>{{ x.price }}</td>
-      <td>{{ x.rating }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-</body>
-</html>
--->
-
 <html>
 <head>
   <title>{% block title %}{% endblock %}</title>
@@ -91,11 +62,10 @@
       attributeRow.appendChild(realPrice);
 
       document.querySelector('#attributeTable tbody').appendChild(attributeRow);
-      //alert(sum)
     }
     
-    function displayType(){
-      information = showAlert()
+    function displayType(text){
+      information = showAlert(text)
 
       name = information[0]
       price = information[1]
@@ -115,20 +85,17 @@
 
       document.querySelector('#attributeTable tbody').appendChild(attributeRow);
       calculateCost()
-      //alert(type)
     }
 
-    function showAlert() {
-      var type = document.getElementById("type").innerHTML;
-      var name = document.getElementById("name").innerHTML;
-      var price = document.getElementById("price").innerHTML;
+    function showAlert(text) {
+      var div_element = document.getElementById(text);
+      var name = div_element.querySelector("#name").innerHTML;
+      var price = div_element.querySelector("#price").innerHTML;
       price = price.substring(1);
-      //alert(price)
       var table = document.getElementById('attributeTable')
       var lastRowIndex = table.rows.length - 1;
       table.deleteRow(lastRowIndex)
       return [name,price]
-      //alert('Button Clicked!');
     }
     
   </script>
@@ -154,17 +121,14 @@
         <h2 class="text-center">All Items</h2>
         <div class="d-flex flex-wrap">
           {% for item in mygrocerylist %}
-          <div class="p-2 w-25 bd-highlight">
+          <div id="{{ item.id }}" class="p-2 w-25 bd-highlight">
             <div class="card-body">
-              <!-- <h5 class="card-title">Card title</h5> -->
               <p class="card-text">
                 <p id="type">{{ item.type }}</p>
                 <p id="name">{{ item.name }}</p>
-                <p id="price">${{ item.price }}</p> <!-- yo add the dolla sign in later-->
+                <p id="price">${{ item.price }}</p> 
               </p>
-              </script>
-              <button id="copyButton" onclick="displayType()" class="btn btn-primary">Add To Cart</button>
-              
+              <button id="copyButton" onclick="displayType('{{ item.id }}')" class="btn btn-primary">Add To Cart</button>
             </div>  
           </div>
           {% endfor %}

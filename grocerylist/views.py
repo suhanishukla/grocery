@@ -13,7 +13,6 @@ def grocerylist(request):
             GroceryList.objects.create(type=row[0], name=row[1], price=row[2],rating=row[3],inlist=False)
     if 'q' in request.GET:
         q = request.GET['q']
-        #mygrocerylist = GroceryList.objects.filter(type__icontains=q)
         multiple_q = Q(Q(type__icontains=q) | Q(name__icontains=q))
         mygrocerylist = GroceryList.objects.filter(multiple_q)
     else: 
