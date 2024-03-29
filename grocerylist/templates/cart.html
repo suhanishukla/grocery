@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html>
 <body>
+<head>
+  <script>
+    var keys = Object.keys(sessionStorage);
+    keys.forEach(function(key) {
+      var itemAdd = sessionStorage.getItem(key);
+      var storedItem = JSON.parse(itemAdd);
+      var paragraph = document.createElement("p");
+      paragraph.textContent = "Name: " + storedItem;
+      document.body.appendChild(paragraph);
+    });
 
+  </script>
+</head>
 
 {% include 'nav_bar.html' %}
-<h1>Shopping Cart Page</h1>
-<table>
+<h2 class="text-center">Shopping Cart</h2>
+
+<table id="attributeTable" class="table round-table">
   <thead>
     <tr>
-      <td>Category</td>
-      <td>Name</td>
-      <td>Price</td>
-      <td>Rating</td>
+      <th scope="col">Store</th>
+      <th scope="col">Item Name</th>
+      <th scope="col">Price</th>
     </tr>
   </thead>
+  <tbody>
+    <tr>
+      <th colspan= "row">Hi</th>
+      <td colspan="1">Example</td>
+      <td colspan="1">Test</td>
+    </tr>
+  </tbody>
 </table>
-</body>
-</html>

@@ -97,6 +97,19 @@
       table.deleteRow(lastRowIndex)
       return [name,price]
     }
+
+    function tester(text)
+    {
+      var div_element = document.getElementById(text);
+      var price = div_element.querySelector("#value").innerHTML;
+      var name = div_element.querySelector("#name").innerHTML;
+      var category = div_element.querySelector("#category").innerHTML;
+      var array_items = [category,name,price]
+      array_items = JSON.stringify(array_items)
+      var key = new Date().getTime();
+      var dynamicKey = 'data_' + key
+      sessionStorage.setItem(dynamicKey, array_items);
+    }
     
   </script>
 </head>
@@ -120,18 +133,32 @@
         <!-- Content for the left half goes here -->
         <h2 class="text-center">All Items</h2>
         <div class="d-flex flex-wrap">
-          {% for item in mygrocerylist %}
-          <div id="{{ item.id }}" class="p-2 w-25 bd-highlight">
-            <div class="card-body">
-              <p class="card-text">
-                <p id="type">{{ item.type }}</p>
-                <p id="name">{{ item.name }}</p>
-                <p id="price">${{ item.price }}</p> 
-              </p>
-              <button id="copyButton" onclick="displayType('{{ item.id }}')" class="btn btn-primary">Add To Cart</button>
-            </div>  
-          </div>
+          
+          
+          {% for item in mygrocerylist|slice:":10" %}
+            {% with type=item.type %}
+            {% with name=item.name %}
+            {% with price=item.price %}
+            {% with id=item.id %}
+            <div id="{{ item.id }}">
+              {% include 'card.html' with image_source="https://via.placeholder.com/300" category=type product_name=name price=price id=id unit="/each" %}
+              <!-- <div id="{{ item.id }}" class="p-2 w-25 bd-highlight">
+                <div class="card-body">
+                  <p class="card-text">
+                    <p id="type">{{ item.type }}</p>
+                    <p id="name">{{ item.name }}</p>
+                    <p id="price">${{ item.price }}</p> 
+                  </p>
+                  <button id="copyButton" onclick="displayType('{{ item.id }}')" class="btn btn-primary">Add To Cart</button>
+                </div>  
+              </div> -->
+            </div>
+            {% endwith %}
+            {% endwith %}
+            {% endwith %}
+            {% endwith %}
           {% endfor %}
+          
         </div>
       </div>
     </div>
