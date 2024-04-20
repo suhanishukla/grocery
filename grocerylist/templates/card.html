@@ -1,0 +1,76 @@
+<!--Sanjanas Card template-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+    margin: 0;
+    }
+    .card {
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    .card h2 {
+        margin-top: -10px;
+        color: #333;
+    }
+    .card h6 {
+      color: #666;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 5px 5px 5px 5px;
+      margin-bottom: 10px;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+    }
+    .card p.price {
+      color: #3BB77E;
+
+    }
+    .card p.price span.value {
+      font-weight: bold;
+      font-size: 20px; /* Adjust the font size as needed */
+    }
+    .card p.price span.unit {
+      font-weight: normal;
+    }
+    .add-to-cart-btn {
+      background-color: #3BB77E; /* Bootstrap primary color */
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+    .add-to-cart-btn i {
+      margin-right: 5px;
+    }
+  </style>
+<head>
+
+<body>
+    <div class="card">
+        <img src="{{ image_source }}" alt="Placeholder Image">
+        <div>
+            <h6 id = "category">{{ category }}</h6>
+            <h2 id = "name">{{ product_name }}</h2>
+            <div class="container">
+                <p class="price"><span id = "value" class="value">${{ price }}</span> <span class="unit">{{ unit }}</span> </p>
+                <a href="#" onclick="tester('{{ id }}')" class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i>Add</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,27 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-    <nav>
-        <div class="branding">
-            <h1 class="logo">Easy EBT</h1>
-            <p class="slogan">EBT grocery and recipe finder</p>
-        </div>
-        <div class="nav-links">
-            <a href="#">Shopping</a>
-            <a href="#">Recipes</a>
-        </div>
-    </nav>
-
-</body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -112,15 +88,18 @@
             <h1 class="logo">Easy EBT</h1>
             <p class="slogan">EBT grocery and recipe finder</p>
         </div>
-        <form class="search-bar" action="search-results.html" method="GET"> <!-- Use a form element -->
-            <input type="text" name="search" placeholder="Search..." style="width: 300px;">
-            <button type="submit" class="search-button"> <!-- Set type to submit and form attribute -->
-                <img src="search.png" alt="Search" width="16" height="16">
+        {% if not hide_specific_part %}
+        <form class="search-bar" role="search"> <!-- Use a form element -->
+            <input type="text" name="q" type="search" placeholder="Search" style="width: 300px;">
+            <button type="submit" class="search-button"> 
+                Search
             </button>
         </form>
+        {% endif %}
         <div class="nav-links">
-            <a href="#">Shopping</a>
-            <a href="#">Recipes</a>
+            <a href="/grocerylist">Shopping</a>
+            <a href="/recipes">Recipes</a>
+            <a href="/cart">Cart</a>
         </div>
     </nav>
 
