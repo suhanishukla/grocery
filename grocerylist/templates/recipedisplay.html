@@ -72,11 +72,11 @@
         }
 
         input:checked + .slider {
-            background-color: #007bff;
+            background-color: #3BB77E;
         }
 
         input:focus + .slider {
-            box-shadow: 0 0 1px #007bff;
+            box-shadow: 0 0 1px #3BB77E;
         }
 
         input:checked + .slider:before {
@@ -101,6 +101,7 @@
 <body>
     {% include 'nav_bar.html' %}
     <div class="toggle-container">
+        <br>
         <span class="suggested-recipes">Suggested Recipes</span>
         <label class="switch">
             <input type="checkbox" id="toggleSwitch">
@@ -108,12 +109,11 @@
         </label>
     </div>
     <div class="container-fluid">
+        <br>
         <h1 class="custom-padding text-center">Recipes</h1>
-    
-      <div class="row">
-    
-        
-          <div class="table-container">
+        <br>
+        <div class="row">  
+         <div class="table-container">
             <!-- Content for the left half goes here -->
             <div class="d-flex flex-wrap justify-content-center">
               
@@ -135,12 +135,8 @@
               
             </div>
           </div>
-    
-    
-      </div>
-    </div>
-    
-            </div>
+        </div>
+    </div>     
     <h1>Recipe List</h1>
     <table>
         <thead>
@@ -183,6 +179,7 @@
 
             recipes.forEach(recipe => {
                 recipe.style.display = 'table-row';
+                
             });
 
             toggleSwitch.addEventListener('change', function() {
@@ -210,6 +207,7 @@
                         recipe.style.display = 'table-row';
                     }
                 });
+                
             });
         });
     </script>
