@@ -6,28 +6,59 @@
 
     <body>
         {% include 'nav_bar.html' %}
-    <table>
-    <thead>
-        <tr>
-        <td>Name</td>
-        <td>serving size</td>
-        <td>ingredients</td>
-        <td>directions</td>
-        <td>hello</td>
-        </tr>
-    </thead>
-    <tbody>
-        {% for x in mystorelist %}
-        <tr>
-        <td>{{ x.name }}</td>
-        <td>{{ x.address }}</td>
-        <td>{{ x.city }}</td>
-        <td>{{ x.state }}</td>
-        <td>{{ x.zip }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-    </table>
+
+<div class="container-fluid">
+    <h1 class="custom-padding text-center">Stores Near Me</h1>
+
+  <div class="row">
+
+    
+      <div class="table-container">
+        <!-- Content for the left half goes here -->
+        <div class="d-flex flex-wrap">
+          
+          
+          {% for item in mystorelist|slice:":10" %}
+            {% with name=item.name %}
+            {% with address=item.address %}
+            {% with city=item.city %}
+            {% with state=item.state %}
+            <div id="{{ item.id }}">
+                {% if item.name == "Ralphs" %} 
+                    {% include 'storecard.html' with imagelink="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Ralphs.svg/2560px-Ralphs.svg.png" %}
+                    <br>
+                {% endif %}
+                {% if item.name == "Food 4 Less" %} 
+                    {% include 'storecard.html' with imagelink="https://s3.grocerywebsite.com/production/manual_loaded_images/2714/F4L_MASTER_4C-1-outline_comp.png" %}
+                    <br>
+                {% endif %}
+                {% if item.name == "Foods Co" %} 
+                    {% include 'storecard.html' with imagelink="https://s3.grocerywebsite.com/production/manual_loaded_images/2714/F4L_MASTER_4C-1-outline_comp.png" %}
+                    <br>
+                {% endif %}
+                {% if item.name == "Walmart" %} 
+                    {% include 'storecard.html' with imagelink="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Walmart_logo.svg/1024px-Walmart_logo.svg.png" %}
+                    <br>
+                {% endif %}
+                {% if item.name == "Safeway" %} 
+                    {% include 'storecard.html' with imagelink="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Safeway_logo.svg/1280px-Safeway_logo.svg.png" %}
+                    <br>
+                {% endif %}
+            </div>
+            {% endwith %}
+            {% endwith %}
+            {% endwith %}
+            {% endwith %}
+          {% endfor %}
+          
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+        </div>
         
     </body>
 </html>

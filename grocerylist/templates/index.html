@@ -34,6 +34,9 @@
       right: 0;
       background-color: lightgray; /* Optional styling */
     }
+    .btn-outline-primary{color:#3BB77E;border-color:#3BB77E}
+    .btn-outline-primary:hover{color:#fff;background-color:#3BB77E;border-color:#3BB77E}
+    
   </style>
   <script>
     
@@ -104,9 +107,7 @@
       var price = div_element.querySelector("#value").innerHTML;
       var name = div_element.querySelector("#name").innerHTML;
       var category = div_element.querySelector("#category").innerHTML;
-      var quantity = "1"
-      var originalPrice = price
-      var array_items = [category,name,price,quantity,originalPrice]
+      var array_items = [category,name,price]
       array_items = JSON.stringify(array_items)
       var key = new Date().getTime();
       var dynamicKey = 'data_' + key
@@ -129,72 +130,45 @@
 
 <div class="container-fluid">
   <div class="row">
-
-    <!-- Left half of the page (col-md-6) -->
-    <div class="col-md-6">
       <div class="table-container">
-        <!-- Content for the left half goes here -->
         <h2 class="text-center">All Items</h2>
-        <div class="d-flex flex-wrap">
-          
-          
-          {% for item in mygrocerylist|slice:":10" %}
-            {% with type=item.type %}
-            {% with name=item.name %}
-            {% with price=item.price %}
-            {% with id=item.id %}
-            <div id="{{ item.id }}">
-              {% include 'card.html' with image_source="https://via.placeholder.com/300" category=type product_name=name price=price id=id unit="/each" %}
-              <!-- <div id="{{ item.id }}" class="p-2 w-25 bd-highlight">
-                <div class="card-body">
-                  <p class="card-text">
-                    <p id="type">{{ item.type }}</p>
-                    <p id="name">{{ item.name }}</p>
-                    <p id="price">${{ item.price }}</p> 
-                  </p>
-                  <button id="copyButton" onclick="displayType('{{ item.id }}')" class="btn btn-primary">Add To Cart</button>
-                </div>  
-              </div> -->
-            </div>
-            {% endwith %}
-            {% endwith %}
-            {% endwith %}
-            {% endwith %}
-          {% endfor %}
-          
+          <div class="d-flex flex-wrap justify-content-center">
+            {% if mygrocerylist %}
+              {% for item in mygrocerylist %}
+                {% with type=item.type %}
+                {% with name=item.name %}
+                {% with price=item.price %}
+                {% with id=item.id %}
+                <div id="{{ item.id }}">
+                  {% include 'card.html' with image_source="https://via.placeholder.com/300" category=type product_name=name price=price id=id unit="/each" %}
+                  <br>
+                </div>
+                {% endwith %}
+                {% endwith %}
+                {% endwith %}
+                {% endwith %}
+              {% endfor %}
+            {% endif %}
         </div>
+    
+        <br>
+      <div class="d-flex flex-wrap justify-content-center">
+      {% if mygrocerylist.has_other_pages %}
+            <div class="btn-group" role="group" aria-label="Item pagination" >
+              {% if mygrocerylist.has_previous %}
+                    <a href="?page={{ mygrocerylist.previous_page_number }}" class="btn btn-outline-primary">&laquo;</a>
+              {% endif %}
+              {% if mygrocerylist.has_next %}
+                    <a href="?page={{ mygrocerylist.next_page_number }}" class="btn btn-outline-primary">&raquo;</a>
+              {% endif %}
+            {% else %}
+              <p>No items found.</p>
+      {% endif %}
       </div>
     </div>
-
-    <!-- Right half of the page (col-md-6) -->
-    <div class="col-md-6">
-      
-      
-      <!-- <button onclick=myFunction()>Click me</button> -->
-      <!-- Content for the right half goes here -->
-      <h2 class="text-center">Shopping Cart</h2>
-
-        <table id="attributeTable" class="table round-table">
-          <thead>
-            <tr>
-              <th scope="col">Store</th>
-              <th scope="col">Item Name</th>
-              <th scope="col">Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th colspan= "row"></th>
-              <td colspan="1"></td>
-              <td colspan="1"></td>
-            </tr>
-          </tbody>
-        </table>
-    </div>
-
   </div>
 </div>
-<!-- </div> -->
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
