@@ -34,10 +34,6 @@
       right: 0;
       background-color: lightgray; /* Optional styling */
     }
-
-
-    .btn-outline-primary{color:#3BB77E;border-color:#3BB77E}
-    .btn-outline-primary:hover{color:#fff;background-color:#3BB77E;border-color:#3BB77E}
     
   </style>
   <script>
@@ -124,14 +120,8 @@
 
 <body>
 {% include 'nav_bar.html' %}
-<div class="container">
-
-  {% block content %}
-  {% endblock %}
-  
-</div>
 <h1 class="custom-padding text-center">Grocery List</h1>
-
+<br>
 <div class="container-fluid">
   <div class="row">
       <div class="table-container">
@@ -163,16 +153,17 @@
       {% if mygrocerylist.has_other_pages %}
             <div class="btn-group" role="group" aria-label="Item pagination" >
               {% if mygrocerylist.has_previous %}
-                    <a href="?page={{ mygrocerylist.previous_page_number }}" class="btn btn-outline-primary">&laquo;</a>
+                    <a href="?page={{ mygrocerylist.previous_page_number }}" class="btn btn-success">&laquo;</a>
               {% endif %}
               {% if mygrocerylist.has_next %}
-                    <a href="?page={{ mygrocerylist.next_page_number }}" class="btn btn-outline-primary">&raquo;</a>
+                    <a href="?page={{ mygrocerylist.next_page_number }}" class="btn btn-success">&raquo;</a>
               {% endif %}
             {% else %}
               <p>No items found.</p>
       {% endif %}
       </div>
     </div>
+    <br>
   </div>
 </div>
 
