@@ -1,18 +1,12 @@
 How to run the project 
-1. Create a virtual environment 
-	python -m venv myworld 
-2. Activate the virtual environment
-   source myworld/bin/activate
-3. Install django in the virtual env 
-python -m pip install django
-4. Install bootstrap in the virtual env 
-python -m pip install django-bootstrap-v5
-5. install pipenv in venv
-pip install pipenv 
-6. Install djangorestframework and corsheaders in venv
-pipenv install djangorestframework
-pipenv install django-cors-headers
-7. Runserver command after navigating to project directory 
+1. Create a virtual environment: python -m venv myworld 
+2. Activate the virtual environment: source myworld/bin/activate
+3. Install django in the virtual env: python -m pip install django
+4. Install bootstrap in the virtual env: python -m pip install django-bootstrap-v5
+5. install pipenv in venv: pip install pipenv 
+6. Install djangorestframework and corsheaders in venv: pipenv install djangorestframework
+7. pipenv install django-cors-headers
+8. Runserver command after navigating to project directory 
 python manage.py runserver 
 
 Notes 
