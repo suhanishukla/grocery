@@ -7,7 +7,12 @@ How to run the project
 python -m pip install django
 4. Install bootstrap in the virtual env 
 python -m pip install django-bootstrap-v5
-5. Runserver command after navigating to project directory 
+5. install pipenv in venv
+pip install pipenv 
+7. Install djangorestframework and corsheaders in venv
+pipenv install djangorestframework
+pipenv install django-cors-headers
+9. Runserver command after navigating to project directory 
 python manage.py runserver 
 
 Notes 
