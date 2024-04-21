@@ -7,7 +7,6 @@
 <body id="body">
 
 {% include 'nav_bar.html' %}
-{% include 'shoppingcard.html' %}
 <br>
 <h2 class="text-center">Shopping Cart</h2>
 <br>
@@ -27,182 +26,178 @@
 <button onclick="clearEverything()"class="btn btn-success">Clear All Items</button>
 
 <script>
-  // var template = document.getElementById('customTemplate');
-  // var clone = document.importNode(template.content, true);
-  // var clonedElement = clone.querySelector('.card');
-  // clonedElement.removeAttribute('hidden')
-  // document.body.appendChild(clone);
-  //check if there is nothing inside the table
-  // var keys = Object.keys(sessionStorage).sort();
-  // keys.forEach(function(key) {
-
-  //   var storedItem = JSON.parse(sessionStorage.getItem(key))
-    
-  //   var newRow = document.createElement('tr');
-  //   newRow.id = key.toString();
-    
-  //   //Make five row entires
-  //   var price = document.createElement('td');
-  //   var name1 = document.createElement('td');
-  //   var cat = document.createElement('td');
-  //   cat.setAttribute('id','price')
-  //   var quantity = document.createElement('td');
-  //   var deleteRows = document.createElement('td');
-
-  //   //Create Delete Item Button & append
-  //   var deleteButton = document.createElement('button');
-  //   deleteButton.textContent = "Delete Item"
-  //   deleteButton.setAttribute('onclick', `deleteItem(${newRow.id})`);
-  //   deleteButton.setAttribute('class', `btn btn-success`);
-  //   deleteRows.appendChild(deleteButton)
-
-  //   //Create the Quantity Dropdown Menu
-  //   var dropClass = document.createElement('div')
-  //   dropClass.setAttribute('class','dropdown')
-
-  //   //Make Drop Down Button
-  //   var dropButton = document.createElement('button');
-  //   dropButton.setAttribute('class','btn btn-success dropdown-toggle')
-  //   dropButton.setAttribute('type','button')
-  //   dropButton.setAttribute('id','dropdownMenuButton1')
-  //   dropButton.setAttribute('data-bs-toggle','dropdown')
-  //   dropButton.setAttribute('aria-expanded','false')
-  //   dropButton.textContent = storedItem[3]
-  //   dropClass.appendChild(dropButton)
-
-  //   //Make Drop Down Menu
-  //   var dropMenu = document.createElement('ul')
-  //   dropMenu.setAttribute('class','dropdown-menu')
-  //   dropMenu.setAttribute('aria-labelledby','dropdownMenuButton1')
-
-
-  //   for (var i =1; i < 10; i++)
-  //   {
-  //     var x = document.createElement('li')
-  //     var dropItem = document.createElement('a')
-  //     dropItem.setAttribute('class','dropdown-item')
-  //     dropItem.setAttribute('href','#')
-  //     dropItem.textContent = i
-  //     //alert(dropItem.textContent)
-  //     dropItem.setAttribute('onclick',`modifyText(${newRow.id}, ${dropItem.textContent})`)
-  //     x.appendChild(dropItem)
-  //     dropMenu.appendChild(x)
-  //     dropClass.appendChild(dropMenu)
-  //   }
-
-  //   //Set the price, name, and category
-  //   price.textContent = storedItem[0];
-  //   name1.textContent = storedItem[1];
-  //   cat.textContent = storedItem[2];
-  //   quantity.appendChild(dropClass)
-    
-  //   newRow.appendChild(price);
-  //   newRow.appendChild(name1);
-  //   newRow.appendChild(quantity);
-  //   newRow.appendChild(cat);
-  //   newRow.appendChild(deleteRows);
-
-  //   document.querySelector('#shoppingCart tbody').appendChild(newRow);
-
-  // });
   
-  // checkEmpty()
+  //check if there is nothing inside the table
+  var keys = Object.keys(sessionStorage).sort();
+  keys.forEach(function(key) {
 
-  // function checkEmpty()
-  // {
-  //   if (sessionStorage.length == 0)
-  //   {
-      
-  //     alert("Empty!")
-  //     return true
-  //   } 
-  //   else
-  //   {
-  //     if (document.getElementById('totalPrice') != null)
-  //     {
-  //       var table = document.querySelector('#shoppingCart tbody')
-  //       table.removeChild(document.getElementById('totalPrice'))
-  //     }
-      
-  //     //Make a Row to get Total Price
-  //     var newRow = document.createElement('tr');
-  //     newRow.setAttribute('id','totalPrice')
-  //     var filler1 = document.createElement('td');
-  //     filler1.innerText = "Total Price"
-  //     filler1.style.fontWeight = "bold";
-  //     var filler2 = document.createElement('td');
-  //     var filler3 = document.createElement('td');
-  //     var filler4 = document.createElement('td');
-  //     var totalPrice = document.createElement('td');
-  //     var keys = Object.keys(sessionStorage).sort();
-  //     total = 0
-  //     keys.forEach(function(key) {
-  //       var storedItem = JSON.parse(sessionStorage.getItem(key))
-  //       var price = storedItem[2]
-  //       price = parseFloat(price.substring(1))
-  //       total = total + price
-  //     });
-  //     total = total.toFixed(2)
-  //     totalPrice.innerText = "$" + total
-  //     totalPrice.style.fontWeight = "bold";
-
-  //     //Append everything together
-  //     newRow.appendChild(filler1)
-  //     newRow.appendChild(filler2)
-  //     newRow.appendChild(filler3)
-  //     newRow.appendChild(totalPrice)
-  //     newRow.appendChild(filler4)
-
-  //     //Add to the table
-  //     document.querySelector('#shoppingCart tbody').appendChild(newRow);
-  //     return false
-  //   }
-  // }
-
-  // function clearEverything()
-  // {
-  //   sessionStorage.clear();
-  //   var table = document.getElementById("zen");
-  //   while (table.rows.length > 0) {
-  //     table.deleteRow(0);
-  //   }
-  //   var table = querySelector('#shoppingCart tbody')
-  //   table.removeChild(document.getElementById('totalPrice'))
-  //   checkEmpty()
-  // }
-
-  // function modifyText(row_id, input)
-  // {
-  //   //change text
-  //   items = row_id.id
-  //   var row = document.getElementById(items)
-  //   row.querySelector("#dropdownMenuButton1").textContent = input
-
-  //   //modify price
-  //   var storedItem = JSON.parse(sessionStorage.getItem(items))
-
-  //   var price = storedItem[4]  //row.querySelector("#price").textContent
-  //   price = parseFloat(price.substring(1))
-  //   price = (price * parseFloat(input)).toFixed(2)
-  //   price = price.toString()
-  //   price = "$" + price
-  //   row.querySelector("#price").textContent = price
-
-  //   //modify session storage
-  //   var new_items = [storedItem[0],storedItem[1],price,input,storedItem[4]]
-  //   new_items = JSON.stringify(new_items)
-  //   sessionStorage.setItem(items, new_items);
+    var storedItem = JSON.parse(sessionStorage.getItem(key))
     
-  //   checkEmpty()
-  // }
+    var newRow = document.createElement('tr');
+    newRow.id = key.toString();
+    
+    //Make five row entires
+    var price = document.createElement('td');
+    var name1 = document.createElement('td');
+    var cat = document.createElement('td');
+    cat.setAttribute('id','price')
+    var quantity = document.createElement('td');
+    var deleteRows = document.createElement('td');
 
-  // function deleteItem(row_id)
-  // {
-  //   items = row_id.id
-  //   sessionStorage.removeItem(items)
-  //   document.getElementById(items).remove()
-  //   check = checkEmpty()
-  // }
+    //Create Delete Item Button & append
+    var deleteButton = document.createElement('button');
+    deleteButton.textContent = "Delete Item"
+    deleteButton.setAttribute('onclick', `deleteItem(${newRow.id})`);
+    deleteButton.setAttribute('class', `btn btn-success`);
+    deleteRows.appendChild(deleteButton)
+
+    //Create the Quantity Dropdown Menu
+    var dropClass = document.createElement('div')
+    dropClass.setAttribute('class','dropdown')
+
+    //Make Drop Down Button
+    var dropButton = document.createElement('button');
+    dropButton.setAttribute('class','btn btn-success dropdown-toggle')
+    dropButton.setAttribute('type','button')
+    dropButton.setAttribute('id','dropdownMenuButton1')
+    dropButton.setAttribute('data-bs-toggle','dropdown')
+    dropButton.setAttribute('aria-expanded','false')
+    dropButton.textContent = storedItem[3]
+    dropClass.appendChild(dropButton)
+
+    //Make Drop Down Menu
+    var dropMenu = document.createElement('ul')
+    dropMenu.setAttribute('class','dropdown-menu')
+    dropMenu.setAttribute('aria-labelledby','dropdownMenuButton1')
+
+
+    for (var i =1; i < 10; i++)
+    {
+      var x = document.createElement('li')
+      var dropItem = document.createElement('a')
+      dropItem.setAttribute('class','dropdown-item')
+      dropItem.setAttribute('href','#')
+      dropItem.textContent = i
+      //alert(dropItem.textContent)
+      dropItem.setAttribute('onclick',`modifyText(${newRow.id}, ${dropItem.textContent})`)
+      x.appendChild(dropItem)
+      dropMenu.appendChild(x)
+      dropClass.appendChild(dropMenu)
+    }
+
+    //Set the price, name, and category
+    price.textContent = storedItem[0];
+    name1.textContent = storedItem[1];
+    cat.textContent = storedItem[2];
+    quantity.appendChild(dropClass)
+    
+    newRow.appendChild(price);
+    newRow.appendChild(name1);
+    newRow.appendChild(quantity);
+    newRow.appendChild(cat);
+    newRow.appendChild(deleteRows);
+
+    document.querySelector('#shoppingCart tbody').appendChild(newRow);
+
+  });
+  
+  checkEmpty()
+
+  function checkEmpty()
+  {
+    if (sessionStorage.length == 0)
+    {
+      
+      alert("Empty!")
+      return true
+    } 
+    else
+    {
+      if (document.getElementById('totalPrice') != null)
+      {
+        var table = document.querySelector('#shoppingCart tbody')
+        table.removeChild(document.getElementById('totalPrice'))
+      }
+      
+      //Make a Row to get Total Price
+      var newRow = document.createElement('tr');
+      newRow.setAttribute('id','totalPrice')
+      var filler1 = document.createElement('td');
+      filler1.innerText = "Total Price"
+      filler1.style.fontWeight = "bold";
+      var filler2 = document.createElement('td');
+      var filler3 = document.createElement('td');
+      var filler4 = document.createElement('td');
+      var totalPrice = document.createElement('td');
+      var keys = Object.keys(sessionStorage).sort();
+      total = 0
+      keys.forEach(function(key) {
+        var storedItem = JSON.parse(sessionStorage.getItem(key))
+        var price = storedItem[2]
+        price = parseFloat(price.substring(1))
+        total = total + price
+      });
+      total = total.toFixed(2)
+      totalPrice.innerText = "$" + total
+      totalPrice.style.fontWeight = "bold";
+
+      //Append everything together
+      newRow.appendChild(filler1)
+      newRow.appendChild(filler2)
+      newRow.appendChild(filler3)
+      newRow.appendChild(totalPrice)
+      newRow.appendChild(filler4)
+
+      //Add to the table
+      document.querySelector('#shoppingCart tbody').appendChild(newRow);
+      return false
+    }
+  }
+
+  function clearEverything()
+  {
+    sessionStorage.clear();
+    var table = document.getElementById("zen");
+    while (table.rows.length > 0) {
+      table.deleteRow(0);
+    }
+    var table = querySelector('#shoppingCart tbody')
+    table.removeChild(document.getElementById('totalPrice'))
+    checkEmpty()
+  }
+
+  function modifyText(row_id, input)
+  {
+    //change text
+    items = row_id.id
+    var row = document.getElementById(items)
+    row.querySelector("#dropdownMenuButton1").textContent = input
+
+    //modify price
+    var storedItem = JSON.parse(sessionStorage.getItem(items))
+
+    var price = storedItem[4]  //row.querySelector("#price").textContent
+    price = parseFloat(price.substring(1))
+    price = (price * parseFloat(input)).toFixed(2)
+    price = price.toString()
+    price = "$" + price
+    row.querySelector("#price").textContent = price
+
+    //modify session storage
+    var new_items = [storedItem[0],storedItem[1],price,input,storedItem[4]]
+    new_items = JSON.stringify(new_items)
+    sessionStorage.setItem(items, new_items);
+    
+    checkEmpty()
+  }
+
+  function deleteItem(row_id)
+  {
+    items = row_id.id
+    sessionStorage.removeItem(items)
+    document.getElementById(items).remove()
+    check = checkEmpty()
+  }
 
   
 </script>

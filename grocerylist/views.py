@@ -100,10 +100,22 @@ def recipelist(request):
         myrecipelist = RecipeList.objects.filter(multiple_q)
     else: 
         myrecipelist = RecipeList.objects.all().values()
+    default_page = 1
+    page = request.GET.get('page', default_page)
+    items_per_page = 16
+    paginator = Paginator(myrecipelist, items_per_page)
+
+    try:
+        myrecipe_page = paginator.page(page)
+    except PageNotAnInteger:
+        myrecipe_page = paginator.page(default_page)
+    except EmptyPage:
+        myrecipe_page = paginator.page(paginator.num_pages)
+
     template = loader.get_template('recipedisplay.html')
     page = '/recipes' in request.path
     context = {
-        'myrecipelist': myrecipelist,
+        'myrecipelist': myrecipe_page,
         'recipe':page
     }
     return HttpResponse(template.render(context, request))

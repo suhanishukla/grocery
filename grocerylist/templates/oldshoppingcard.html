@@ -9,7 +9,7 @@
         
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         
-      <!-- <style>
+      <style>
              body {
                margin: 0;
              }
@@ -73,11 +73,12 @@
                margin-right: 8px; /* Add spacing between icon and text */
              }
            
-      </style> -->
+      </style>
       <head>
    <body>
     
-      <!-- <div class="card">
+    <!-- <template id="customTemplate"> -->
+      <div class="card">
                  <img src="{{ image_source }}" alt="Placeholder Image">
                  
          <div class="card-details">
@@ -94,73 +95,7 @@
             </div>
                     
          </div>
-      </div> -->
-    <style>
-      .card {
-        width: 1000px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 10px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        margin-right: 20px;
-      }
-      .card h5 {
-        margin-top: -10px;
-        margin-bottom: 20px;
-      }
-      .container-price {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        
-      }
-
-      .card img {
-      height: 100px;
-      border-radius: 5px 5px 5px 5px;
-      margin-bottom: 10px;
-      align-items: center;
-      margin-left: 30px;
-      margin-top: 10px;
-    }
-      
-      .add-to-cart-btn {
-      height: 40px;
-      background-color: #3BB77E; /* Bootstrap primary color */
-      color: #fff;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 10px;
-      text-decoration: none;
-    }
-
-    </style>
-    <div class="card mb-3">
-      <div class="row">
-        <div class="col-md-5 align-items-center">
-          <img src="https://eatfresh.org/.netlify/builders/_ipx/image_query_compat/w%3D780%26h%3D438%26fm%3Djpg%26q%3D75/https%3A%2F%2Flive-eatfreshd8.pantheonsite.io%2Fsites%2Fdefault%2Ffiles%2F2022-03%2F2022_0307_hero_chia_parfait.jpg/2022_0307_hero_chia_parfait.jpg?u=https%3A%2F%2Flive-eatfreshd8.pantheonsite.io%2Fsites%2Fdefault%2Ffiles%2F2022-03%2F2022_0307_hero_chia_parfait.jpg&a=w%3D780%26h%3D438%26fm%3Djpg%26q%3D75&cd=16c03599700760625676966b55cacc8c" alt="Placeholder Image">
-        </div>
-        <div class="col-md-6">
-          <div class="card-body text-center">
-            <p class="card-text text-center"></p>
-            <h5 class="card-title">Name</h5>
-            <div class="container-price">
-              <div class="price"><span id = "value" class="value">${{ price }}</span>  </div>
-              <div class="dropdown">
-                <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  Count
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </div>
-              <a href="#" onclick="tester('{{ id }}')" class="add-to-cart-btn"><i class="fas fa-trash"></i> Delete</a>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
+    <!-- </template>  -->
    </body>
 </html>
