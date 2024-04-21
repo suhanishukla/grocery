@@ -50,7 +50,7 @@ def readcsvfile():
 def grocerylist(request): 
     # Read CSV file and create GroceryList objects
     GroceryList.objects.all().delete()
-    with open('groceryimagesupdated.csv','r') as file: 
+    with open('groceryimagesupdated-1.csv','r') as file: 
         csvreader = csv.reader(file)
         for row in csvreader: 
             GroceryList.objects.create(type=row[0], name=row[1], price=row[3],description=row[2],inlist=False, imagelink=row[5], quantity=row[4])
