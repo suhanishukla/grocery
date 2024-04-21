@@ -13,7 +13,7 @@
     }
     .card {
       width: 300px;
-      height: 430px;
+      height: 410px;
       border: 1px solid #ccc;
       border-radius: 5px;
       padding: 20px;
@@ -21,7 +21,7 @@
       margin-right: 20px;
     }
     .card h2 {
-      margin-top: 0;
+      margin-top: -5px;
       color: #333;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -34,13 +34,14 @@
       color: #666;
     }
     .card img {
+      height: 270px;
       border-radius: 5px 5px 5px 5px;
       margin-bottom: 10px;
     }
-    .container {
+    .container-price {
         display: flex;
         justify-content: space-between;
-        align-items: center
+        align-items: left;
     }
     .card p.price {
       color: #3BB77E;
@@ -54,6 +55,7 @@
       font-weight: normal;
     }
     .add-to-cart-btn {
+      height: 40px;
       background-color: #3BB77E; /* Bootstrap primary color */
       color: #fff;
       border: none;
@@ -62,7 +64,7 @@
       text-decoration: none;
     }
     .add-to-cart-btn i {
-      margin-right: 5px;
+      margin-right: 0px;
     }
   </style>
 <head>
@@ -73,9 +75,9 @@
         <div>
             <h6 id = "category">{{ category }}</h6>
             <h2 id = "name">{{ product_name }}</h2>
-            <div class="container">
-                <p class="price"><span id = "value" class="value">${{ price }}</span> <span class="unit">{{ unit }}</span> </p>
-                <a href="#" onclick="tester('{{ id }}')" class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i>Add</a>
+            <div class="container-price">
+              <p class="price"><span id = "value" class="value">${{ price }}</span>  </p>
+              <a href="#" onclick="tester('{{ id }}')" class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add</a>
             </div>
         </div>
     </div>
