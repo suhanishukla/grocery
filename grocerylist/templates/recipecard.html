@@ -12,8 +12,8 @@
     margin: 0;
     }
     .card {
-      width: 600px;
-      height: 280px;
+      width: 300px;
+      height: 300px;
       border: 1px solid #ccc;
       border-radius: 5px;
       padding: 20px;
@@ -25,6 +25,7 @@
         color: #333;
     }
     .card h6 {
+        align-items: center;
       color: #666;
     }
     .card img {
@@ -41,7 +42,7 @@
     .container-location {
         display:flex;
         justify-content: space-between;
-        align-items: left;
+        align-items: center;
     }
     .table-container {
         max-height: 80vh;
@@ -59,7 +60,6 @@
       font-weight: normal;
     }
     .shop-btn {
-      height: 40px;
       background-color: #3BB77E; /* Bootstrap primary color */
       color: #fff;
       border: none;
@@ -75,14 +75,12 @@
 
 <body>
     <div class="card">
-        <img src="{{ imagelink }}" alt="Placeholder Image">
+        <img src="{{ imagerecipe }}" alt="Placeholder Image">
         <div>
-            <h6 id = "category">{{ category }}</h6>
-            <h2 id = "name">{{ name }}</h2>
             <div class="container-location">
-                <p class="location"><span id = "value" class="value">{{ city }}</span> <span class="unit">{{ address }}</span> </p>
-                <a href="/grocerylist" onclick="tester('{{ id }}')" class="shop-btn">Shop</a>
+                <p class="location"><span id = "value" class="value">{{ name }}</span>  </p>
             </div>
+            <h6>Serves {{ servingsize }}</h6>
         </div>
     </div>
 </body>

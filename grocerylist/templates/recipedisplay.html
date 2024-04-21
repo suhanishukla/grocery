@@ -107,6 +107,40 @@
             <span class="slider round"></span>
         </label>
     </div>
+    <div class="container-fluid">
+        <h1 class="custom-padding text-center">Recipes</h1>
+    
+      <div class="row">
+    
+        
+          <div class="table-container">
+            <!-- Content for the left half goes here -->
+            <div class="d-flex flex-wrap justify-content-center">
+              
+              
+              {% for item in myrecipelist|slice:":20" %}
+                {% with name=item.name %}
+                {% with servingsize=item.servingsize %}
+                {% with ingredients_list=item.ingredients_list %}
+                {% with directions=item.directions %}
+                <div id="{{ item.id }}">
+                    {% include 'recipecard.html' with image_source="https://via.placeholder.com/300"  %}
+                    <br>
+                </div>
+                {% endwith %}
+                {% endwith %}
+                {% endwith %}
+                {% endwith %}
+              {% endfor %}
+              
+            </div>
+          </div>
+    
+    
+      </div>
+    </div>
+    
+            </div>
     <h1>Recipe List</h1>
     <table>
         <thead>
