@@ -14,7 +14,7 @@
             font-family: 'Quicksand', Arial, sans-serif;
             margin: 0;
             padding: 0;
-        }
+          }
         
         nav {
             background-color: #3BB77E;
@@ -44,20 +44,24 @@
         .search-bar {
             display: flex;
             align-items: center;
+            border-radius: 10px; /* Set border radius for rounded corners */
+            overflow: hidden; /* Ensure children don't exceed rounded corners */
         }
         
         .search-bar input {
             padding: 8px;
             margin-right: 0px;
             border: none;
+            
         }
         
         .search-button {
             padding: 8px;
             border: none;
-            background-color: #D9D9D9;
+            background-color: #2b7c52;
             display: flex;
             align-items: center;
+            color: #fff;
         }
         
         .search-button img {
@@ -98,14 +102,37 @@
             <p class="slogan">EBT grocery and recipe finder</p>
         </a>
         </div>
-        {% if not hide_specific_part %}
+
+        {% if shop %}
         <form class="search-bar" role="search"> <!-- Use a form element -->
-            <input type="text" name="q" type="search" placeholder="Enter city or store name" style="width: 300px;">
+            <input type="text" name="q" type="search" placeholder="Enter item" style="width: 300px;">
             <button type="submit" class="search-button"> 
                 Search
             </button>
         </form>
         {% endif %}
+
+        {% if recipe %}
+        <form class="search-bar" role="search"> <!-- Use a form element -->
+            <input type="text" name="q" type="search" placeholder="Search-" style="width: 300px;">
+            <button type="submit" class="search-button"> 
+                Search
+            </button>
+        </form>
+        {% endif %}
+
+        {% if home %}
+        <form class="search-bar" role="search"> <!-- Use a form element -->
+            <input type="text" name="q" type="search" placeholder="Enter City or Store" style="width: 300px;">
+            <button type="submit" class="search-button"> 
+                Search
+            </button>
+        </form>
+        {% endif %}
+        
+
+
+
         <div class="nav-links">
             <a href="/grocerylist">Shopping</a>
             <a href="/recipes">Recipes</a>

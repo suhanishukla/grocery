@@ -77,8 +77,10 @@ def grocerylist(request):
 
     # Render template with context
     template = loader.get_template('index.html')
+    page = '/grocerylist' in request.path
     context = {
         'mygrocerylist': mygrocerylist_page,
+        'shop' : page
     }
     
     return HttpResponse(template.render(context, request))
@@ -93,8 +95,10 @@ def recipelist(request):
     else: 
         myrecipelist = RecipeList.objects.all().values()
     template = loader.get_template('recipedisplay.html')
+    page = '/recipes' in request.path
     context = {
         'myrecipelist': myrecipelist,
+        'recipe':page
     }
     return HttpResponse(template.render(context, request))
 
@@ -116,8 +120,10 @@ def homePage(request):
     else: 
         mystorelist = StoreList.objects.all().values()
     template = loader.get_template('home.html')
-    
+    page = '/home' in request.path
+
     context = {
         'mystorelist': mystorelist,
+        'home':page
     }
     return HttpResponse(template.render(context, request))
