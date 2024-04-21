@@ -6,8 +6,7 @@ How to run the project
 5. install pipenv in venv: pip install pipenv 
 6. Install djangorestframework and corsheaders in venv: pipenv install djangorestframework
 7. pipenv install django-cors-headers
-8. Runserver command after navigating to project directory 
-python manage.py runserver 
+8. Runserver command after navigating to project directory: python manage.py runserver 
 
 Notes 
 Any time you make changes to the django models you will need to migrate the changes:
