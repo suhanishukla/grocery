@@ -9,10 +9,10 @@ python -m pip install django
 python -m pip install django-bootstrap-v5
 5. install pipenv in venv
 pip install pipenv 
-7. Install djangorestframework and corsheaders in venv
+6. Install djangorestframework and corsheaders in venv
 pipenv install djangorestframework
 pipenv install django-cors-headers
-9. Runserver command after navigating to project directory 
+7. Runserver command after navigating to project directory 
 python manage.py runserver 
 
 Notes 
