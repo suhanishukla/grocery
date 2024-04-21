@@ -10,6 +10,7 @@ from django.core.paginator import (
     EmptyPage,
     PageNotAnInteger,
 )
+from django.http import JsonResponse
 #from rest_framework.views import APIView
 #from rest_framework.response import Response
 #from rest_framework import status 
@@ -87,7 +88,12 @@ def grocerylist(request):
 
 
 def recipelist(request): 
-    
+    RecipeList.objects.all().delete()
+    with open('recipeswithimagesandurls.csv','r') as file: 
+        csvreader = csv.reader(file)
+        for row in csvreader: 
+            RecipeList.objects.create(name=row[0], servingsize=row[1], ingredients_list=row[2],imagelink=row[3], recipelink=row[4])
+            
     if 'q' in request.GET:
         q = request.GET['q']
         multiple_q = Q(Q(name__icontains=q) | Q(ingredients_list__icontains=q))
@@ -127,3 +133,9 @@ def homePage(request):
         'home':page
     }
     return HttpResponse(template.render(context, request))
+
+#def toggle_model_field(request): 
+   # if request.method == 'POST':
+      #  toggle_state = request.POST.get('toggleState')
+        #if toggle_state == 'on':
+            

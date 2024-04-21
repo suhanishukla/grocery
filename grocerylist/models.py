@@ -16,6 +16,8 @@ class RecipeList(models.Model):
     servingsize=models.CharField(max_length=10)
     ingredients_list = models.CharField(max_length=255)
     directions = models.CharField(max_length=1000)
+    imagelink = models.URLField(max_length=200, null=True)
+    recipelink = models.URLField(max_length=200, null=True)
 
 class CityList(models.Model): 
     #"city","city_ascii","state_id","state_name","county_fips","county_name","lat","lng","population","density","source","military","incorporated","timezone","ranking","zips","id"
