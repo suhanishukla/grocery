@@ -2,54 +2,27 @@
 <html>
 
 <head>
-  <style>
-    #table-container {
-    margin: 0 auto; /* This centers the container horizontally */
-    }
-
-    .table.round-table {
-    border-collapse: collapse;
-    border: 2px solid #ccc;
-    width: 100%;
-    }
-
-     .table.round-table th, .table.round-table td {
-        /* border: 1px solid #ccc; */
-        padding: 8px;
-        text-align: center; 
-        vertical-align: middle;  
-    }
-
-    .table.round-table th {
-        background-color: #f2f2f2;
-    }
-
-    #types {
-      padding: 8px;
-    }
-
-  </style>
+  
 </head>
 <body id="body">
 
 {% include 'nav_bar.html' %}
+<br>
 <h2 class="text-center">Shopping Cart</h2>
-
-<div id="table-container">
-  <table id="shoppingCart" class="table round-table">
-    <thead>
-      <tr>
-        <th scope="col">Category</th>
-        <th scope="col">Item Name</th>
-        <th scope="col">Quantity</th>
-        <th scope="col">Price</th>
-        <th scope="col">Delete Item</th>
-      </tr>
-    </thead>
-    <tbody id="zen">
-    </tbody>
-  </table>
-</div>
+<br>
+<table id="shoppingCart" class="table round-table">
+  <thead>
+    <tr>
+      <th scope="col">Category</th>
+      <th scope="col">Item Name</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Price</th>
+      <th scope="col">Delete Item</th>
+    </tr>
+  </thead>
+  <tbody id="zen">
+  </tbody>
+</table>
 <button onclick="clearEverything()"class="btn btn-success">Clear All Items</button>
 
 <script>
@@ -63,10 +36,9 @@
     var newRow = document.createElement('tr');
     newRow.id = key.toString();
     
-    //Make six row entires
+    //Make five row entires
     var price = document.createElement('td');
     var name1 = document.createElement('td');
-    name1.setAttribute('id','types')
     var cat = document.createElement('td');
     cat.setAttribute('id','price')
     var quantity = document.createElement('td');

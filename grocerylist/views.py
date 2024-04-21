@@ -92,7 +92,7 @@ def recipelist(request):
     with open('recipeswithimagesandurls.csv','r') as file: 
         csvreader = csv.reader(file)
         for row in csvreader: 
-            RecipeList.objects.create(name=row[0], servingsize=row[1], ingredients_list=row[2],imagelink=row[3], recipelink=row[4])
+            RecipeList.objects.create(name=row[0], servingsize=row[1], ingredients_list=row[2],directions=row[3],imagelink=row[4], recipelink=row[5])
             
     if 'q' in request.GET:
         q = request.GET['q']
@@ -134,8 +134,8 @@ def homePage(request):
     }
     return HttpResponse(template.render(context, request))
 
-#def toggle_model_field(request): 
-   # if request.method == 'POST':
-      #  toggle_state = request.POST.get('toggleState')
-        #if toggle_state == 'on':
+"""def toggle_model_field(request): 
+    if request.method == 'POST':
+        toggle_state = request.POST.get('toggleState')
+        if toggle_state == 'on':"""
             
