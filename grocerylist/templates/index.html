@@ -104,7 +104,9 @@
       var price = div_element.querySelector("#value").innerHTML;
       var name = div_element.querySelector("#name").innerHTML;
       var category = div_element.querySelector("#category").innerHTML;
-      var array_items = [category,name,price]
+      var quantity = "1"
+      var originalPrice = price
+      var array_items = [category,name,price,quantity,originalPrice]
       array_items = JSON.stringify(array_items)
       var key = new Date().getTime();
       var dynamicKey = 'data_' + key

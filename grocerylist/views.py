@@ -38,10 +38,7 @@ def grocerylist(request):
     
     return HttpResponse(template.render(context, request))
 def recipelist(request): 
-    with open('recipes.csv','r') as file: 
-        csvreader = csv.reader(file)
-        for row in csvreader: 
-            RecipeList.objects.create(name=row[0], servingsize=row[1], ingredients_list=row[2],directions=row[3])
+    
     if 'q' in request.GET:
         q = request.GET['q']
         multiple_q = Q(Q(name__icontains=q) | Q(ingredients_list__icontains=q))
@@ -65,11 +62,10 @@ def shoppingCart(request):
     return HttpResponse(template.render(context,request))
 
 def homePage(request): 
-    """with open('ralphsdatabase.csv','r') as file: 
-        csvreader = csv.reader(file)
-        for row in csvreader: 
-
-            StoreList.objects.create(name=row[0], address=row[2], city=row[3],state=row[4], zip=row[5])"""
+    
     template = loader.get_template('home.html')
-    context = {'hello there': 'this is sample'}
+    mystorelist = StoreList.objects.all().values()
+    context = {
+        'mystorelist': mystorelist,
+    }
     return HttpResponse(template.render(context, request))

@@ -13,22 +13,19 @@
     <tr>
       <th scope="col">Category</th>
       <th scope="col">Item Name</th>
+      <th scope="col">Quantity</th>
       <th scope="col">Price</th>
       <th scope="col">Delete Item</th>
     </tr>
   </thead>
   <tbody id="zen">
-    <!-- <tr>
-      <td colspan= "row">Hi</th>
-      <td colspan="1">Example</td>
-      <td colspan="1">Test</td>
-      <td colspan="1"><button>Delete Item</button></td>
-    </tr> -->
   </tbody>
 </table>
 <button onclick="clearEverything()"class="btn btn-primary">Clear All Items</button>
 
 <script>
+  
+  //check if there is nothing inside the table
   var keys = Object.keys(sessionStorage).sort();
   keys.forEach(function(key) {
 
@@ -37,39 +34,116 @@
     var newRow = document.createElement('tr');
     newRow.id = key.toString();
     
+    //Make five row entires
     var price = document.createElement('td');
     var name1 = document.createElement('td');
     var cat = document.createElement('td');
+    cat.setAttribute('id','price')
+    var quantity = document.createElement('td');
     var deleteRows = document.createElement('td');
 
+    //Create Delete Item Button & append
     var deleteButton = document.createElement('button');
     deleteButton.textContent = "Delete Item"
     deleteButton.setAttribute('onclick', `deleteItem(${newRow.id})`);
     deleteButton.setAttribute('class', `btn btn-primary`);
-
     deleteRows.appendChild(deleteButton)
 
+    //Create the Quantity Dropdown Menu
+    var dropClass = document.createElement('div')
+    dropClass.setAttribute('class','dropdown')
 
+    //Make Drop Down Button
+    var dropButton = document.createElement('button');
+    dropButton.setAttribute('class','btn btn-success dropdown-toggle')
+    dropButton.setAttribute('type','button')
+    dropButton.setAttribute('id','dropdownMenuButton1')
+    dropButton.setAttribute('data-bs-toggle','dropdown')
+    dropButton.setAttribute('aria-expanded','false')
+    dropButton.textContent = storedItem[3]
+    dropClass.appendChild(dropButton)
+
+    //Make Drop Down Menu
+    var dropMenu = document.createElement('ul')
+    dropMenu.setAttribute('class','dropdown-menu')
+    dropMenu.setAttribute('aria-labelledby','dropdownMenuButton1')
+
+
+    for (var i =1; i < 10; i++)
+    {
+      var x = document.createElement('li')
+      var dropItem = document.createElement('a')
+      dropItem.setAttribute('class','dropdown-item')
+      dropItem.setAttribute('href','#')
+      dropItem.textContent = i
+      //alert(dropItem.textContent)
+      dropItem.setAttribute('onclick',`modifyText(${newRow.id}, ${dropItem.textContent})`)
+      x.appendChild(dropItem)
+      dropMenu.appendChild(x)
+      dropClass.appendChild(dropMenu)
+    }
+
+    //Set the price, name, and category
     price.textContent = storedItem[0];
     name1.textContent = storedItem[1];
     cat.textContent = storedItem[2];
+    quantity.appendChild(dropClass)
     
     newRow.appendChild(price);
     newRow.appendChild(name1);
+    newRow.appendChild(quantity);
     newRow.appendChild(cat);
     newRow.appendChild(deleteRows);
 
     document.querySelector('#shoppingCart tbody').appendChild(newRow);
+
   });
+
+  var text = document.getElementById("zen").innerHTML
+  alert(text)
+  if(text == '\n  ')
+  {
+    alert("empty table")
+  }
+  else
+  {
+    // var paragraph = document.createElement("p");
+    // paragraph.textContent = "This is a dynamically created paragraph.";
+    // document.getElementById("zen").appendChild(paragraph)
+    alert("full table")
+  }
 
   function clearEverything()
   {
     sessionStorage.clear();
     var table = document.getElementById("zen");
-    while (table.rows.length >= 0) {
-      table.deleteRow(1);
-      //fix this it only deletes everything but the first row
+    while (table.rows.length > 0) {
+      table.deleteRow(0);
     }
+    text = '\n  '
+  }
+
+  function modifyText(row_id, input)
+  {
+    //change text
+    items = row_id.id
+    var row = document.getElementById(items)
+    row.querySelector("#dropdownMenuButton1").textContent = input
+
+    //modify price
+    var storedItem = JSON.parse(sessionStorage.getItem(items))
+
+    var price = storedItem[4]  //row.querySelector("#price").textContent
+    price = parseFloat(price.substring(1))
+    price = (price * parseFloat(input)).toFixed(2)
+    price = price.toString()
+    price = "$" + price
+    row.querySelector("#price").textContent = price
+
+    //modify session storage
+    var new_items = [storedItem[0],storedItem[1],price,input,storedItem[4]]
+    new_items = JSON.stringify(new_items)
+    sessionStorage.setItem(items, new_items);
   }
 
   function deleteItem(row_id)
@@ -77,8 +151,15 @@
     items = row_id.id
     sessionStorage.removeItem(items)
     document.getElementById(items).remove()
+
+    var check = document.getElementById("zen").innerHTML;
+    if (check == '\n  ')
+    {
+      text = '\n  '
+    }
   }
 
+  
 </script>
 
 </body>
