@@ -133,9 +133,4 @@ def homePage(request):
         'home':page
     }
     return HttpResponse(template.render(context, request))
-
-"""def toggle_model_field(request): 
-    if request.method == 'POST':
-        toggle_state = request.POST.get('toggleState')
-        if toggle_state == 'on':"""
             

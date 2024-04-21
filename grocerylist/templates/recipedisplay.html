@@ -123,10 +123,14 @@
                 {% with servingsize=item.servingsize %}
                 {% with ingredients_list=item.ingredients_list %}
                 {% with directions=item.directions %}
+                {% with imglink=item.imagelink %}
+                {% with recipe_link=item.recipelink %}
                 <div id="{{ item.id }}">
-                    {% include 'recipecard.html' with image_source="https://via.placeholder.com/300"  %}
+                    {% include 'recipecard.html' with image_source=imglink  %}
                     <br>
                 </div>
+                {% endwith %}
+                {% endwith %}
                 {% endwith %}
                 {% endwith %}
                 {% endwith %}
