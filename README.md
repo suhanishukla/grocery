@@ -1,9 +1,9 @@
 How to run the project 
-Create a virtual environment 
+1. Create a virtual environment 
 	python -m venv myworld 
-Activate the virtual environment 
-source myworld/bin/activate
-Install django in the virtual env 
+2. Activate the virtual environment
+   source myworld/bin/activate
+3. Install django in the virtual env 
 python -m pip install django
 Install bootstrap in the virtual env 
 python -m pip install django-bootstrap-v5
