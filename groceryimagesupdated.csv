@@ -1,0 +1,117 @@
+Type,Name,Description,Price,Quantity,Image
+Fruits,Apple,Gala,1.99/lb,,https://i5.walmartimages.com/seo/Fresh-Red-Delicious-Apple-Each_7320e63a-de46-4a16-9b8c-526e15219a12_3.e557c1ad9973e1f76f512b34950243a3.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Fruits,Banana,Organic,0.69/lb,,https://i5.walmartimages.com/seo/Fresh-Banana-Fruit-Each_5939a6fa-a0d6-431c-88c6-b4f21608e4be.f7cd0cc487761d74c69b7731493c1581.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Fruits,Orange,Naval,0.99/lb,,https://i5.walmartimages.com/seo/Fresh-Orange-Bell-Pepper-Each_eb1893c6-ff33-4a36-ba05-d7fe42b67fbf.830244cad6037e9c0b18c4c237259b5d.jpeg
+Fruits,Grapes,Red Seedless,2.49/lb,,https://i5.walmartimages.com/seo/Fresh-Red-Seedless-Grapes-Bag-2-25-lbs-Bag-Est_c78cf78a-bc60-46e3-b8ff-93f6429ac324.f343f4f1450299d85cb7270777d2594a.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Fruits,Berries,Strawberries,3.99,16 oz,https://i5.walmartimages.com/seo/Cap-n-Crunch-Cereal-Oops-All-Berries-Cereal-16-9-oz_89d8ff41-8dbd-4447-b692-2796ce862477.5775cf4cfa0358086ff356875349d1ef.jpeg
+Vegetables,Lettuce,Romaine,1.49/head,,https://i5.walmartimages.com/seo/Fresh-Romaine-Lettuce-Each_568bc3a8-53c9-4344-b002-b28b09199e89.072705a99df32f0628fdeedf05437f74.jpeg
+Vegetables,Carrots,Organic,1.29/lb,,https://i5.walmartimages.com/seo/Fresh-Shredded-Carrots-10-oz-Bag_35817df3-4652-4035-9e07-0d073658c7d3.f739e89b28b14d00be573312547a31db.jpeg
+Vegetables,Broccoli,Crown,1.99/lb,,https://i5.walmartimages.com/seo/Great-Value-Frozen-Broccoli-Florets-12-oz-Steamable-Bag_c6e47501-d339-4baa-ac33-94518223ff3b.e6736cdc6c8437702d6a2f6db2d243c0.jpeg
+Vegetables,Tomatoes,Roma,1.69/lb,,https://i5.walmartimages.com/seo/Fresh-Slicing-Tomato-Each_a1e8e44a-2b82-48ab-9c09-b68420f6954c.04f6e0e87807fc5457f57e3ec0770061.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Vegetables,Potatoes,Russet,2.99,5 lb bag,https://i5.walmartimages.com/seo/Russet-Baking-Potatoes-Whole-Fresh-Each_c638c006-a982-48f7-aa33-6d3a8dc2983c.8fd015937ebfdd46c8fcb6177d0d1b1d.jpeg
+Eggs,Eggs,Large,2.49,1 dozen,https://i5.walmartimages.com/seo/Happy-Egg-Co-Organic-Free-Range-Large-Brown-Eggs-12-Count-Dozen_f43760b8-e1af-46e5-9592-268fa93a2991.da907e8e7a9f94e3ada4bb9722c3c170.jpeg
+Eggs,Egg Whites,100% Liquid,2.99,16 oz,https://i5.walmartimages.com/asr/b51833a8-bf12-44f2-96f7-1911807c5d6b.cf04279c806dcb242b821a4a313567e7.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Eggs,Egg Substitutes,Cholesterol-Free,4.49,32 oz,https://i5.walmartimages.com/asr/bb5e48f5-e4b0-43a1-b9fd-2aaae8924ccf.ad3a12499bb7583cab0d2de481fde8fc.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Eggs,Eggland's Best,Hard-Cooked,2.99,6 ct,https://i5.walmartimages.com/asr/30e87e5f-117a-45c2-9a5f-8e3ef18a0280.1d50a49f22a4bc102b6f6404489242b3.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Milk,Milk,0.01,3.49,Gallon,https://i5.walmartimages.com/seo/Great-Value-Milk-Whole-Vitamin-D-Gallon-Plastic-Jug_6a7b09b4-f51d-4bea-a01c-85767f1b481a.86876244397d83ce6cdedb030abe6e4a.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Milk,Almond Milk,Original,2.99,64 oz,https://i5.walmartimages.com/seo/Almond-Breeze-Original-Almond-Milk-64-oz-Bottle_77d7a343-9292-4c92-8f78-c92d40e3083c.359ab52b5368fe8b016e06ad69f65f00.jpeg
+Milk,Soy Milk,Vanilla,2.49,32 oz,https://i5.walmartimages.com/seo/Great-Value-Original-Soymilk-0-5-gal_0979785e-1314-48a6-8bed-9515d48a7b93.ef751caff6d62769c5dc79790a12421a.jpeg
+Milk,Coconut Milk,Unsweetened,3.29,32 oz,https://i5.walmartimages.com/seo/So-Delicious-Dairy-Free-UHT-Unsweetened-Coconut-Milk-1-Quart_723faa63-e27b-402f-ae88-8685b26433c4.dd876c49fc9cb97e07e1d3cdcfbaa906.jpeg
+Grains,Bread,Whole Wheat,3.49,24 oz loaf,https://i5.walmartimages.com/seo/Freshness-Guaranteed-Sliced-Italian-Bread-14-oz_c3cffbe2-726d-420c-8e29-ffd0a2c9b009.5b2e8205a193e6cd7b70395aa2764e72.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Grains,Pasta,Spaghetti,1.29,16 oz,https://www.traderjoes.com/content/dam/trjo/products/m20901/75657.png
+Grains,Rice,White,3.99,,https://i5.walmartimages.com/seo/Great-Value-Long-Grain-Enriched-Rice-16-oz_b7568cd3-77aa-4fb4-b3d9-e00019a6a1ad.4af3784d9d1cb27e3ec04797e27d6e0b.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Grains,Quinoa,Organic,4.99,12 oz,https://i5.walmartimages.com/seo/Great-Value-Organic-White-Quinoa-16-oz_15eda7a4-1b2c-481c-853e-e76ff9bb0f70.720c0525f2ec3bd89db69dc105e2200f.jpeg
+Grains,Oats,Old-Fashioned,4.49,42 oz,https://i5.walmartimages.com/seo/Quaker-Oats-100-Whole-Grain-Quick-1-Minute-Net-Wt-42oz-2lb-10oz-1-19kg_d19a3aa9-c323-4328-8e02-a002b0a18dd4.9461181a45d361efd92060ff0135dfe1.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Nuts,Almonds,Raw,9.99,16 oz,https://i5.walmartimages.com/seo/Freshness-Guaranteed-Dark-Chocolate-Almonds-12-5-oz_1573c306-cdf3-40cf-aa63-dda9f2e357de.c8455a34cc3eeb3cc81571594882a535.jpeg
+Nuts,Walnuts,Halves & Pieces,6.49,8 oz,https://i5.walmartimages.com/seo/Great-Value-Chopped-Walnuts-4-oz_b33ebdf2-66a3-4c34-9ab2-e6f34e045832.d86f58b727cca5e1888d3cad5c9a4e4e.jpeg
+Nuts,Cashews,Roasted & Salted,7.75,10 oz,https://i5.walmartimages.com/seo/Great-Value-Toasted-Coconut-Cashews-8-25-oz_c613e5d4-9c74-47bc-8581-1913cdc767e8.cc64df452c93c6f1e1ce7183fd106d08.jpeg
+Nuts,Peanuts,Unsalted,3.99,16 oz,https://i5.walmartimages.com/seo/Great-Value-Dry-Roasted-Salted-with-Sea-Salt-Peanuts-34-5-oz_e42987ab-7388-4329-8729-7ba95adcc3fb.9188ae73715a06a4da075ab223b61fb1.jpeg
+Nuts,Pistachios,Roasted & Salted,8.99,12 oz,https://i5.walmartimages.com/seo/Wonderful-Roasted-Salted-Pistachios-24-Oz_4478e514-11b5-41c5-9249-85b7e31b9a2a.9f113b5a6a3e6b1f9c0b8659a5b59b86.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Baking Products,Flour,All-Purpose,2.49,5 lb,https://i5.walmartimages.com/seo/Gold-Medal-Flour-All-Purpose-Flour-Baking-And-Cooking-Ingredient-10-lb_db2aa1a9-07c9-4144-8dcc-c2c3d11d94de.ece0d87ba90818bd3191b03f12a9a3e3.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Baking Products,Sugar,Granulated,2.99,4 lb,https://i5.walmartimages.com/seo/Liquid-I-V-Sugar-Free-Hydration-Multiplier-Electrolyte-Powder-Packet-Drink-Mix-Lemon-Lime-6-Ct_8159bdf4-8fa1-4fbd-a6ae-bb712e5f1164.308e00c9fca699330286fe7e726b39a4.jpeg
+Baking Products,Baking Soda,Arm & Hammer,0.99,16 oz,https://i5.walmartimages.com/seo/ARM-HAMMER-Pure-Baking-Soda-For-Baking-Cleaning-Deodorizing-1-lb-Box_0aa9b122-318b-4d48-ad34-812a5fb40d21.0057ac3d1d84e096f2399d2ba320e7da.jpeg
+Baking Products,Chocolate Chips,Semi-Sweet,2.79,12 oz,https://i5.walmartimages.com/seo/Nestle-Toll-House-Semi-Sweet-Chocolate-Baking-Chips-Regular-Size-12-oz-Bag_ed61e4e0-7b73-4e86-8494-6a4b10feed92.302393d0437518a80eaf7dbcca1c9ea3.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Baking Products,Vanilla Extract,Pure,3.49,2 oz,https://i5.walmartimages.com/seo/Simply-Organic-Vanilla-Extract-Certified-Organic-4-oz-bottle_66a40f2a-0a68-49a2-80fc-5474075aac1c.307bd0de977b62b188d96515e6f7b1c9.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Herbs & Spices,Salt,Iodized,1.29,26 oz,https://i5.walmartimages.com/asr/e7d443bd-604b-4689-b42c-d2bc9cac182a.f35217d4d4647391fc58298bed933635.jpeg
+Herbs & Spices,Black Pepper,Ground,2.49,4 oz,https://i5.walmartimages.com/seo/McCormick-Non-GMO-Kosher-Pure-Ground-Black-Pepper-16-oz-Bottle_f59e53dd-0224-49a5-badd-38435b730cd0.ab055d0f663de1d727c0aa7fb6bdfaaa.jpeg
+Herbs & Spices,Garlic Powder,Spice Classics,1.99,3.12 oz,https://i5.walmartimages.com/asr/2aa97818-4b49-466f-a0a2-7eabe7d6f6c8.66277b9b129d8652d5f1d55f8d90e30f.jpeg
+Herbs & Spices,Basil,Dried,1.49,0.5 oz,https://i5.walmartimages.com/seo/Fresh-Basil-0-5-oz-Clamshell_128d0434-e4df-41f5-8913-064dc5791551.13a7f8ad3d23e109db5235aa5746feb9.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Herbs & Spices,Paprika,Smoked,3.29,2.5 oz,https://i5.walmartimages.com/seo/Great-Value-Paprika-2-5-oz_71f4982c-fbed-4c0c-a9da-0841f69a866b.2d7f4209a0419dd2b89031d12a576a7c.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Meat,Chicken,Boneless Skinless Breasts,2.99/lb,Family Pack,https://i5.walmartimages.com/seo/Louisiana-Fish-Fry-Products-Seasoned-Chicken-Fry-22-oz_485399ea-3778-408f-9eef-5cc00df55eb4.9e5fc2d324c49c24d71a52241f0efb2a.jpeg
+Meat,Beef,Ground Chuck,4.49,1 lb,https://i5.walmartimages.com/seo/All-Natural-90-Lean-10-Fat-Ground-Beef-Sirloin-2-25-lb-Tray_52f7f05f-6957-4530-a5bf-fbb22d726aa4.a841b9bea97a6dd7ddd54a7f5eba33dc.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Meat,Pork,Loin Chops,1.99/lb,,https://i5.walmartimages.com/seo/Farmer-John-Pork-Boneless-Loin-Roast-Half-Vac_05ebb2b5-884d-470b-8e18-b38c1729dc6e.abce6b17ca00ec7f3b54f81fba5927ef.jpeg
+Meat,Salmon,Wild-Caught,7.99,8 oz,https://i5.walmartimages.com/seo/Fresh-Atlantic-Salmon-Whole-Portions-0-70-1-25-lb-BAP-Certified-23g-Protein-per-Serving_6082558b-a6eb-4324-b8f8-3b455c2dd5ba.a0840cb6f5fa46cb63e0aaed93d5f932.jpeg
+Meat,Shrimp,Fresh,9.99/lb,16-20 ct,https://i5.walmartimages.com/seo/Campbell-s-Condensed-Cream-of-Shrimp-Soup-10-5-oz-Can_53c4bddf-2605-4f60-a12d-f763af709a79.890d690abb2f3f8f6977c7960d10048e.jpeg
+Pasta,Spaghetti,Pasta,1.29,16 oz,https://www.traderjoes.com/content/dam/trjo/context-images/75722-spaghetti-chitarra-pdp.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg
+Pasta,Penne,Pasta,1.29,16 oz,https://i5.walmartimages.com/asr/7e0ee33e-cd3f-4010-84b9-a003049bd5c9.fabfaf94d2f3f65d0ab834f95473d27e.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Pasta,Fettuccine,Pasta,1.29,16 oz,https://i5.walmartimages.com/asr/50f7b317-e89e-47af-8b69-3f17c996f69e.c832d89e2ed52c9f509161780033f92e.jpeg
+Pasta,Angel Hair,Pasta,1.29,16 oz,https://i5.walmartimages.com/asr/19f9332a-c4d1-4f2e-9553-1382f15528c5.9aa32d4abe5fdc88c2be279d1090e4cf.jpeg
+Pasta,Lasagna,Pasta,1.29,16 oz,https://i5.walmartimages.com/seo/Stouffer-s-Meat-and-Sauce-Family-Size-Lasagna-Frozen-Frozen-Meal-38-oz-Frozen_11220840-56fc-4749-a8b0-1fb1b0c3c9a9.12a926369dd9e5cf296495f4c0118bb6.jpeg
+Rice,White Rice,Long Grain,3.99,5 lb,https://i5.walmartimages.com/asr/867bd900-3eac-43cf-ae07-65dabc45d805.b3733ed3eb74b5de7269ddf2563398fe.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Rice,Brown Rice,Medium Grain,2.99,2 lb,https://i5.walmartimages.com/seo/Great-Value-Natural-Brown-Long-Grain-Rice-32-oz_683fd735-d4a5-4d06-8f81-0777675a8142.5d5bcb7d5a72594a05c522a925f24e4c.jpeg
+Rice,Arborio Rice,Italian,3.49,1 lb,https://i5.walmartimages.com/seo/RiceSelect-Arborio-Rice-Italian-Style-Rice-for-Risotto-2-lb-Jar_259837c9-0dd3-4905-acf3-cb1109331e1b.a346f880a4554ff6384be6d0f715a340.jpeg
+Rice,Jasmine Rice,Fragrant,8.99,10 lb,https://i5.walmartimages.com/seo/Golden-Star-Prime-Grade-Thai-Hom-Mali-Jasmine-Rice-20-lb_02fb670f-2219-45b0-a46a-45f954a44ecc.56484caa4606c761f9a7dddc6d793d44.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Rice,Basmati Rice,Indian,6.49,5 lb,https://i5.walmartimages.com/seo/Mahatma-Basmati-White-Rice-Fragrant-Extra-Long-Grain-Rice-2-lb-Bag_2e81f117-4c5f-4fab-a214-675d8d454940.56f36be68451584ca96a4015f7411a71.jpeg
+Fruits,Peach,White,1.99/lb,,https://i5.walmartimages.com/seo/Princess-Peach-Showtime-Nintendo-Switch-With-Exclusive-Princess-Peach-Hair-Scrunchie-2-Pack_e69b8fa7-88cc-46aa-95dd-55e0ffb48f91.900b8fe3489d642d8f5951f4f267211e.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Fruits,Pineapple,Whole,2.99/each,,https://i5.walmartimages.com/seo/Fresh-Pineapple-Each_1d2b3723-b31f-481d-ae30-c82fcbb59e20.d2e4de8d8b987f98a6e9da93a7e8c752.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Fruits,Watermelon,Sweet Seedless,0.59/lb,,https://i5.walmartimages.com/seo/Freshness-Guaranteed-Watermelon-Chunks-42-oz_a639b244-bc64-43f1-850a-763a245b7672.59befe581d002b70da0d07284cfa943e.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Fruits,Kiwi,Green,0.79/each,,https://i5.walmartimages.com/seo/Zespri-Sungold-Fresh-Kiwi-Fruit-2lb-Package_18fc5aee-8879-4637-a06d-b23d652b8bf5.5002480e3ac01f9061e4e3808a26e702.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Fruits,Mango,Ripe,1.49/each,,https://i5.walmartimages.com/seo/Fresh-Mangoes-Each-Sweet_cc54242f-cb87-4a25-9baa-fccaa20f5443.64fa79325ad44a7352dcd3c2a8b477be.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Vegetables,Spinach,Baby,2.99,5 oz,https://i5.walmartimages.com/seo/Great-Value-Chopped-Spinach-12-oz-Frozen_483d73bd-e9b9-4ce7-a8ec-b79323292c33.ff8eb0e689e682aae896c4d94411a144.jpeg
+Vegetables,Onion,Yellow,0.99/lb,,https://i5.walmartimages.com/seo/Fresh-Whole-White-Onions-Each_6b4eeca7-4d15-4f34-ad82-7a0fef73c251.836371068e707ee76431b139ecdbc76a.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Vegetables,Cucumber,English,0.99/each,,https://i5.walmartimages.com/asr/13ea911f-f694-4755-af92-01f9a6e51ed6.6d0a51de33980787815d4e4bdfca35e5.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Vegetables,Bell Pepper,Green,0.79/each,,https://i5.walmartimages.com/asr/5d3ca3f5-69fa-436a-8a73-ac05713d3c2c.7b334b05a184b1eafbda57c08c6b8ccf.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Vegetables,Cauliflower,Head,2.49/each,,https://www.traderjoes.com/content/dam/trjo/products/m20702/66248.png/jcr:content/renditions/cq5dam.web.1280.1280
+Eggs,Egg Beaters,Original,3.49,32 oz,https://i5.walmartimages.com/asr/e4d4da8b-f13d-468d-9a7f-8a80f21dff2e.4673b3829420b2fc2ab6dd1e72aec4d5.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Milk,Rice Milk,Original,2.99,32 oz,https://i5.walmartimages.com/asr/ec7a9c14-e12d-465d-8836-cd3ed3112c13_1.99bdbd0f657f5b26e46180de60d31b24.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Grains,Tortillas,Corn,1.99,30 ct,https://i5.walmartimages.com/seo/Great-Value-Medium-Flour-Tortillas-12-oz-8-Count_71087ce0-7567-4217-aa67-3e48ea3913bf.2d99a3932302228454fe0b96ade6146d.jpeg
+Grains,Bagels,Plain,2.99,6 ct,https://i5.walmartimages.com/seo/Great-Value-Pre-Sliced-Plain-Bagels-20-oz-6-Count_0d29550b-1cb2-4c4e-8b34-e8d4e3ae134f.23ca75533f81e03112ebdda97479fe2c.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Nuts,Pecans,Raw,5.99,8 oz,https://i5.walmartimages.com/seo/Great-Value-Chopped-Pecans-24-oz_f5bb96ec-59d9-4889-a65e-65cd46683548.4efc5bf7c28a1cd34f93cb3270833b30.jpeg
+Nuts,Macadamia Nuts,Whole,7.49,6 oz,https://i5.walmartimages.com/seo/Kirkland-Signature-Dry-Roasted-Macadamia-Nuts-24-oz_ba07cfd2-50ed-4c05-9467-2323b5fb40ef.743b584e1a9d3a2072b399d99d3bf78b.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Nuts,Hazelnuts,Filberts,4.99,8 oz,https://i5.walmartimages.com/seo/Great-Value-Hazelnut-Medium-Roast-Ground-Coffee-12-oz-Bag_04cd4f46-9aae-4dd4-b611-fc7b2e991b56.ab0bd4e67ee9f470d49ed5b478e332c6.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Nuts,Pine Nuts,Shelled,9.99,4 oz,https://i5.walmartimages.com/asr/8a524d5c-b2bf-43ce-ac4c-192ed6dc3358.1176f4896d8b64717d3b75166d0b1746.jpeg
+Nuts,Chestnuts,Fresh,6.99,16 oz,https://i5.walmartimages.com/seo/Dynasty-Water-Chestnuts-Sliced-8-Oz_79d8a1b0-e877-4230-b356-9aa653c90691.faa70942c1bb4e6542fbf7b3c54c4894.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Baking Products,Yeast,Active Dry,1.99,3 packets,https://i5.walmartimages.com/seo/Fleischmann-s-Active-Dry-Yeast-4-Oz_82677eee-7718-49db-8f21-dcd6d712f466.eaec2194f0641a96d73609d4d03b1c77.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Baking Products,Cocoa Powder,Unsweetened,3.49,8 oz,https://i5.walmartimages.com/seo/Hershey-s-Natural-Unsweetened-Cocoa-Powder-Can-8-oz_fb54ea6c-282c-47de-8468-5969294819cb.67d152703f860ff522bf06011aa998ca.jpeg
+Baking Products,Cornstarch,16 oz,1.29,,https://i5.walmartimages.com/seo/Argo-Cornstarch-100-Cornstarch-Gluten-free_8f4b2db7-3d26-4821-98a6-55f3812f3e88_5.a82fecc21f0fc5149ae428cc024704d8.png
+Baking Products,Baking Powder,Double Acting,1.99,8.1 oz,https://i5.walmartimages.com/seo/Great-Value-Double-Acting-Baking-Powder-8-1-oz_ace24ba2-950f-4c21-b0bd-c7dd77f819b2.5967e27d197c34c6c60f8d424635d804.jpeg
+Baking Products,Cornmeal,Yellow,1.99,24 oz,https://i5.walmartimages.com/seo/Great-Value-Enriched-Yellow-Corn-Meal-80-oz_a451ba07-a652-43a9-83a4-c46b6d8afd2d.0a36f995d0f71a131d9bb24ad4639f81.jpeg
+Herbs & Spices,Oregano,Dried,1.49,0.75 oz,https://i5.walmartimages.com/seo/Fresh-Oregano-75-oz_54aa4434-2b0e-4b7c-b033-e61e918fc282.3c3bc3b28f929eebb771f1d44cdb2ebf.jpeg
+Herbs & Spices,Cinnamon,Ground,2.49,2.37 oz,https://i5.walmartimages.com/seo/Great-Value-Cinnamon-Sticks-0-75-oz_2498b218-cee9-4a19-9d73-93c511587046.55e68b8c98e7914adc56c9540a4215f8.jpeg
+Herbs & Spices,Thyme,Dried,1.99,0.75 oz,https://i5.walmartimages.com/asr/42a38cc8-2712-4783-88cc-334a186ce53b.5c9478d109a0822ac997750831ae39d4.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Herbs & Spices,Chili Powder,Ground,1.79,2.5 oz,https://i5.walmartimages.com/asr/d781522a-aa03-4341-9565-1010fee746df.765bc4b34b08a5235504a880821cbd77.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Herbs & Spices,Ground Ginger,Spice Islands,2.99,1.5 oz,https://i5.walmartimages.com/seo/Great-Value-Organic-Ground-Ginger-1-6-oz_8fc9a814-917f-48fc-a64e-8a0fcd85ca93.0afe3091605fb9d19050483f09bcd68e.jpeg
+Meat,Ground Turkey,85% Lean,4.99,1 lb,https://i5.walmartimages.com/seo/Foster-Farms-Fresh-Natural-93-Lean-Ground-Turkey-20g-Protein-per-4-oz-Serving-1-lb-Tray_79864ba4-3572-4b15-ba89-aa81a2a00b07.bd14a015532bcf6ed0cb99a1c2e538b0.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Pasta,Linguine,Pasta,1.29,16 oz,https://i5.walmartimages.com/asr/e7a739c0-54ec-4dbf-9956-460fa0d1cdf2.e89b525b325d8cb6275c1fc36813c674.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Pasta,Rotini,Pasta,1.29,16 oz,https://i5.walmartimages.com/seo/Barilla-Whole-Grain-Rotini-Pasta-16-oz_dfad0ae1-64a0-4ad5-ab08-81cdb8ec94ba.4fcaf2d13fd90e13eb7510fb1c1f341e.jpeg
+Pasta,Orzo,Pasta,1.29,16 oz,https://www.traderjoes.com/content/dam/trjo/products/m20901/03029.png/jcr:content/renditions/cq5dam.web.1280.1280
+Pasta,Shells,Pasta,1.29,16 oz,https://i5.walmartimages.com/seo/Freshness-Guaranteed-Vanilla-Dessert-Shells-5-oz-6-Count_ed35b573-2736-4f05-b7a9-d3449d3a9b2f.d80edde496b9e4b43a8379764dc0c779.jpeg
+Pasta,Macaroni,Pasta,1.29,16 oz,https://i5.walmartimages.com/seo/Great-Value-Deluxe-Original-Cheddar-Macaroni-Cheese-14-oz_e764a95c-6ee8-408d-a6ba-bf5a78986eee.4b7cf8ba440e1bdf5cd4ebb923613ecd.jpeg
+Rice,Wild Rice,Long Grain,3.99,16 oz,https://i5.walmartimages.com/seo/Rice-A-Roni-Long-Grain-Wild-Rice-Mix-Packaged-Meal-4-3-oz-Shelf-Stable-Box_5c06ae98-b4a5-494d-b379-340b744a9641.c8919dd11f3086bd7cefaab639db6d24.jpeg
+Rice,Black Rice,Forbidden,4.99,16 oz,https://i5.walmartimages.com/seo/MRM-Raw-Organic-Black-Rice-Powder-6-Oz_2b9598c6-3b14-4780-b67e-3adf6b37822f.1fb9308db24ac317d9b966d6e09b8fc2.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Rice,Sticky Rice,Glutinous,8.99,5 lb,https://i5.walmartimages.com/seo/Three-Ladies-Brand-Thai-Sweet-Glutinous-Rice-Sanpatong-5-lbs-2-27-Kgs_330e7c80-85a7-469a-bb28-cb85eb14633d_1.b6f4d82f1d195838cc6cf9fc3711b936.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Fruits,Plum,Red,2.49/lb,,https://i5.walmartimages.com/seo/Fresh-Plum-Each_0a5dffd1-b77e-49e3-8ee6-ebc37c949452.f3202fa20364886dfa607ce9223cfb47.jpeg
+Fruits,Cantaloupe,Whole,2.99/each,,https://i5.walmartimages.com/seo/Cantaloupe-each_fb4c18a5-9367-4770-b99f-7518c72db482.5609c32e87a3110b734aad048bf9fe35.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Fruits,Lemon,Seedless,0.79/each,,https://i5.walmartimages.com/seo/Fresh-Lemon-Each_f025c57c-13e1-4a1a-ac81-0695aaf2473d.7f3c9f067735c2730223c9147a646f7c.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Fruits,Pear,Bartlett,1.29/each,,https://i5.walmartimages.com/seo/Fresh-Bartlett-Pears-Each_6689d57d-1612-439e-8bf0-84670e942819.21f4f05ece3924be6986e91179ce571b.jpeg
+Fruits,Cherry,Tart,2.99/lb,,https://i5.walmartimages.com/asr/969b9b28-a551-40f0-a4d1-a4dd13db2230_1.23035fd18c0bd2fdd145ac94e4cfd4af.jpeg
+Vegetables,Kale,Organic,1.99/bunch,,https://www.traderjoes.com/content/dam/trjo/products/m20702/65311.png/jcr:content/renditions/cq5dam.web.1280.1280
+Vegetables,Cabbage,Green,0.59/lb,,https://i5.walmartimages.com/seo/Organic-Fresh-Green-Cabbage-Each_32590b14-fa27-4602-9308-76c9e4c2073e.ee5b548e16cf1c47dc1e51e5bc19b1ca.jpeg
+Vegetables,Zucchini,Green,0.99/lb,,https://i5.walmartimages.com/seo/Great-Value-Zucchini-Blend-10-oz-Frozen_d8709cc9-253d-421b-bed9-879d54c52955.a48ec5473786901275006534ae2176d8.jpeg
+Vegetables,Green Beans,Fresh,1.99/lb,,https://i5.walmartimages.com/seo/Fresh-Green-Beans-32-oz_8196efcf-081d-4b42-96ab-56f626ac2342.c769ed344cf9ec9f2c75fb12b9aee3ab.jpeg
+Vegetables,Asparagus,Organic,3.99/lb,,https://i5.walmartimages.com/seo/Marketside-Fresh-Asparagus-Spears-10-oz_5318501a-8f49-4903-9798-4b9d5fc85ab8.30bf6d816092cae3f0d0f7b284763c14.jpeg
+Milk,Goat Milk,Whole,4.99,32 oz,https://i5.walmartimages.com/asr/7135967c-8d94-4f18-be88-94bd3344a051.987c0821cce56c10b579c7ebc0f8dc6f.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Milk,Hemp Milk,Vanilla,3.99,64 oz,https://i5.walmartimages.com/seo/Pacific-Foods-Original-Hemp-Milk-Plant-Based-Milk-32-oz-Carton_b59504a2-6af6-4fa4-9ee2-562039f1df0e.2370d2bbeb058e9757ea4eac70bb8f5f.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Milk,Condensed Milk,Sweetened,1.99,14 oz,https://i5.walmartimages.com/seo/Great-Value-Sweetened-Condensed-Milk-14-oz_c1ecf1b1-2a04-41f4-974a-7b2655491160.388f5d98d667b97b945c1d73b0750e4d.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Nuts,Brazil Nuts,Raw,8.99,12 oz,https://i5.walmartimages.com/seo/Freshness-Guaranteed-Raw-Brazil-Nuts-8-oz_ad9bbb99-4308-4d93-8eeb-78e77f7c2262.24dc68703c92937271ef508c2ec8a382.jpeg
+Baking Products,Corn Syrup,Light,2.99,32 oz,https://i5.walmartimages.com/seo/Great-Value-Light-Corn-Syrup-16-fl-oz_1072d2fa-d88a-4172-aa29-03210a6e408b.90af8a962e99fdb8750ce0a22854b836.jpeg
+Baking Products,Molasses,Blackstrap,3.49,12 oz,https://i5.walmartimages.com/asr/9c50641e-00a7-48ed-b84c-eeb10542c4ce.ddf5a519d7ae26d861545c584b7c82f5.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Baking Products,Shortening,Vegetable,4.99,48 oz,https://i5.walmartimages.com/seo/Crisco-All-Vegetable-Shortening-16-oz-Can_c83a5f4f-aaf7-4b2b-acb3-9898663cef75_1.39bec6632895edcf20404a78355428db.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Baking Products,Pie Crust,Pre-Made,3.49,"9""",https://i5.walmartimages.com/asr/f869b0e6-4dc1-403c-9df8-7d05bd68c8d6.394114653478b03c74df04f3838c14a6.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Herbs & Spices,Bay Leaves,Dried,1.79,0.12 oz,https://i5.walmartimages.com/seo/McCormick-Whole-Bay-Leaves-2-oz-Mixed-Spices-Seasonings_1dc67a79-dc3a-41b7-b237-e24e95347abc.89bdaeb2b3eef80a7a086110e160d020.jpeg
+Herbs & Spices,Cayenne Pepper,Ground,1.49,1.75 oz,https://i5.walmartimages.com/seo/Great-Value-Organic-Cayenne-Pepper-1-7-oz_17bf60a1-9039-463a-ada8-252eaf5a30f2.5f13b3532acd8a4501f1bede4489f902.jpeg
+Herbs & Spices,Coriander,Ground,2.99,2 oz,https://i5.walmartimages.com/asr/86b55d1d-64f1-4820-95db-5424c72cc079.cc2d5d4481c1af48d846cf54e793a7bc.jpeg
+Vegetables,Radish,Red,0.99/bunch,,https://i5.walmartimages.com/seo/Fresh-Red-Radish-Bunch_ea0e9022-05d6-4e6a-ad18-633471a03a0b.0c926e45ad97705e24c87ed57f663122.jpeg
+Herbs & Spices,Turmeric,Ground,2.49,1.38 oz,https://i5.walmartimages.com/seo/Great-Value-Organic-Ground-Turmeric-1-0-oz_02becb1a-c7c6-4731-940c-6dc1ed7f1f44.17def63a52675cb759118a4ca34d0606.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF
+Herbs & Spices,Cardamom,Ground,4.99,2 oz,https://i5.walmartimages.com/seo/Slofoodgroup-Green-Cardamom-Pods-Cardamom-Spice-2-oz_c26aeb68-3fb6-408f-8ea9-ff04a3446556.94a083fe7ecb3a082a32c528e2d63747.jpeg
+Pasta,Rigatoni,Pasta,1.29,16 oz,https://i5.walmartimages.com/asr/7969932f-28f3-4f48-9b9d-a87c39583ba8.b6ef170d4308c898cc464f394a0f442f.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF

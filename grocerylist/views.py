@@ -16,6 +16,11 @@ def readcsvfile():
             GroceryList.objects.create(type=row[0], name=row[1], price=row[2],rating=row[3],inlist=False)
             
 def grocerylist(request): 
+    GroceryList.objects.all().delete()
+    with open('groceryimagesupdated.csv','r') as file: 
+        csvreader = csv.reader(file)
+        for row in csvreader: 
+            GroceryList.objects.create(type=row[0], name=row[1], price=row[3],description=row[2],inlist=False, imagelink=row[5], quantity=row[4])
             
     if 'q' in request.GET:
         q = request.GET['q']
