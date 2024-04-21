@@ -5,11 +5,12 @@ How to run the project
    source myworld/bin/activate
 3. Install django in the virtual env 
 python -m pip install django
-Install bootstrap in the virtual env 
+4. Install bootstrap in the virtual env 
 python -m pip install django-bootstrap-v5
-Runserver command after navigating to project directory 
+5. Runserver command after navigating to project directory 
 python manage.py runserver 
 
+Notes 
 Any time you make changes to the django models you will need to migrate the changes:
 python manage.py makemigrations 
 python manage.py migrate 
