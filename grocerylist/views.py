@@ -5,16 +5,30 @@ from .models import RecipeList
 import csv 
 from django.shortcuts import render 
 from django.db.models import Q
-
-def grocerylist(request): 
+#from rest_framework.views import APIView
+#from rest_framework.response import Response
+#from rest_framework import status 
+from . serializer import * 
+def readcsvfile(): 
     with open('output.csv','r') as file: 
         csvreader = csv.reader(file)
         for row in csvreader: 
             GroceryList.objects.create(type=row[0], name=row[1], price=row[2],rating=row[3],inlist=False)
+            
+def grocerylist(request): 
+            
     if 'q' in request.GET:
         q = request.GET['q']
-        multiple_q = Q(Q(type__icontains=q) | Q(name__icontains=q))
-        mygrocerylist = GroceryList.objects.filter(multiple_q)
+        multiple_q = (Q(type__icontains=q) | Q(name__icontains=q))
+        filteredlist = GroceryList.objects.filter(multiple_q)
+        mygrocerylist = []
+
+        for item in filteredlist: 
+            if item not in mygrocerylist: 
+                print(item.id)
+                mygrocerylist.append(item)
+        #mygrocerylist = GroceryList.objects.filter(multiple_q).distinct()
+        print("there are "+str(len(mygrocerylist))+" in mygrocerylist")
     else: 
         mygrocerylist = GroceryList.objects.all().values()
     template = loader.get_template('index.html')
@@ -30,7 +44,6 @@ def recipelist(request):
             RecipeList.objects.create(name=row[0], servingsize=row[1], ingredients_list=row[2],directions=row[3])
     if 'q' in request.GET:
         q = request.GET['q']
-        #mygrocerylist = GroceryList.objects.filter(type__icontains=q)
         multiple_q = Q(Q(name__icontains=q) | Q(ingredients_list__icontains=q))
         myrecipelist = RecipeList.objects.filter(multiple_q)
     else: 
@@ -51,3 +64,12 @@ def shoppingCart(request):
     
     return HttpResponse(template.render(context,request))
 
+def homePage(request): 
+    """with open('ralphsdatabase.csv','r') as file: 
+        csvreader = csv.reader(file)
+        for row in csvreader: 
+
+            StoreList.objects.create(name=row[0], address=row[2], city=row[3],state=row[4], zip=row[5])"""
+    template = loader.get_template('home.html')
+    context = {'hello there': 'this is sample'}
+    return HttpResponse(template.render(context, request))
