@@ -38,6 +38,11 @@
         justify-content: space-between;
         align-items: center
     }
+    .container-location {
+        display:flex;
+        justify-content: space-between;
+        align-items: left;
+    }
     .table-container {
         max-height: 80vh;
         overflow-y: auto;
@@ -73,7 +78,7 @@
         <div>
             <h6 id = "category">{{ category }}</h6>
             <h2 id = "name">{{ name }}</h2>
-            <div class="container">
+            <div class="container-location">
                 <p class="location"><span id = "value" class="value">{{ city }}</span> <span class="unit">{{ address }}</span> </p>
                 <a href="/grocerylist" onclick="tester('{{ id }}')" class="shop-btn">Shop</a>
             </div>
