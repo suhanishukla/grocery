@@ -137,7 +137,7 @@
           </div>
         </div>
     </div>     
-    <h1>Recipe List</h1>
+    <!-- <h1>Recipe List</h1>
     <table>
         <thead>
             <tr>
@@ -157,13 +157,16 @@
             </tr>
             {% endfor %}
         </tbody>
-    </table>
+    </table> -->
 
     <script>
+        // recipes = document.querySelectorAll('.card');
+        // alert(recipes.length);
         document.addEventListener('DOMContentLoaded', function() {
             const toggleSwitch = document.getElementById('toggleSwitch');
-            const recipes = document.querySelectorAll('.recipe-row');
+            const recipes = document.querySelectorAll('.card'); //gets in as card
 
+            //reading session storage
             const ingredientNames = [];
             for (let i = 0; i < sessionStorage.length; i++) {
                 const key = sessionStorage.key(i);
@@ -177,19 +180,19 @@
 
             toggleSwitch.checked = false;
 
+            //displays all cards
             recipes.forEach(recipe => {
-                recipe.style.display = 'table-row';
-                
+                recipe.style.display = 'block';
             });
 
+            
             toggleSwitch.addEventListener('change', function() {
                 console.log('Toggle Switch State:', this.checked);
                 const isChecked = this.checked;
                 recipes.forEach(recipe => {
-                    const recipeName = recipe.querySelector('td:first-child').textContent.trim();
-                    console.log('Processing Recipe:', recipeName);
+                    const recipeName = recipe.querySelector('.value').textContent.trim();
                     if (isChecked) {
-                        const ingredients = recipe.querySelector('td:nth-child(3)').textContent.toLowerCase(); 
+                        const ingredients = recipe.querySelector('.ingredients').textContent.toLowerCase(); 
                         console.log('Recipe Ingredients:', ingredients);
                         let hasMatchingIngredient = false;
                         ingredientNames.forEach(ingredient => {
@@ -199,12 +202,12 @@
                             }
                         });
                         if (hasMatchingIngredient) {
-                            recipe.style.display = 'table-row';
+                            recipe.style.display = 'block';
                         } else {
                             recipe.style.display = 'none';
                         }
                     } else {
-                        recipe.style.display = 'table-row';
+                        recipe.style.display = 'block';
                     }
                 });
                 
