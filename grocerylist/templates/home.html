@@ -15,10 +15,10 @@
     
       <div class="table-container">
         <!-- Content for the left half goes here -->
-        <div class="d-flex flex-wrap">
+        <div class="d-flex flex-wrap justify-content-center">
           
           
-          {% for item in mystorelist|slice:":10" %}
+          {% for item in mystorelist|slice:":20" %}
             {% with name=item.name %}
             {% with address=item.address %}
             {% with city=item.city %}
@@ -33,7 +33,7 @@
                     <br>
                 {% endif %}
                 {% if item.name == "Foods Co" %} 
-                    {% include 'storecard.html' with imagelink="https://s3.grocerywebsite.com/production/manual_loaded_images/2714/F4L_MASTER_4C-1-outline_comp.png" %}
+                    {% include 'storecard.html' with imagelink="https://www.foodsco.net/content/v2/binary/image/foodsco_svg_logo-desktop-1556238494829.svg" %}
                     <br>
                 {% endif %}
                 {% if item.name == "Walmart" %} 

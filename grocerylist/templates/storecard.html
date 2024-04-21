@@ -13,10 +13,12 @@
     }
     .card {
       width: 600px;
+      height: 300px;
       border: 1px solid #ccc;
       border-radius: 5px;
       padding: 20px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      margin-right: 20px;
     }
     .card h2 {
         margin-top: -10px;
@@ -26,14 +28,24 @@
       color: #666;
     }
     .card img {
-      width: 100%;
+      width: auto;
       border-radius: 5px 5px 5px 5px;
       margin-bottom: 10px;
+      height: 150px;
     }
     .container {
         display: flex;
         justify-content: space-between;
         align-items: center
+    }
+    .container-location {
+        display:flex;
+        justify-content: space-between;
+        align-items: left;
+    }
+    .table-container {
+        max-height: 80vh;
+        overflow-y: auto;
     }
     .card p.location {
       color: #3BB77E;
@@ -66,9 +78,9 @@
         <div>
             <h6 id = "category">{{ category }}</h6>
             <h2 id = "name">{{ name }}</h2>
-            <div class="container">
+            <div class="container-location">
                 <p class="location"><span id = "value" class="value">{{ city }}</span> <span class="unit">{{ address }}</span> </p>
-                <a href="#" onclick="tester('{{ id }}')" class="shop-btn">Shop</a>
+                <a href="/grocerylist" onclick="tester('{{ id }}')" class="shop-btn">Shop</a>
             </div>
         </div>
     </div>
