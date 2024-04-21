@@ -1,0 +1,87 @@
+<!--modified Sanjanas Card template for stores-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+    margin: 0;
+    }
+    .card {
+      width: 300px;
+      height: 300px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      margin-right: 20px;
+    }
+    .card h2 {
+        margin-top: -10px;
+        color: #333;
+    }
+    .card h6 {
+        align-items: center;
+      color: #666;
+    }
+    .card img {
+      width: auto;
+      border-radius: 5px 5px 5px 5px;
+      margin-bottom: 10px;
+      height: 150px;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+    }
+    .container-location {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .table-container {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    .card p.location {
+      color: #3BB77E;
+
+    }
+    .card p.location span.value {
+      font-weight: bold;
+      font-size: 20px; /* Adjust the font size as needed */
+    }
+    .card p.location span.unit {
+      font-weight: normal;
+    }
+    .shop-btn {
+      background-color: #3BB77E; /* Bootstrap primary color */
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+    .add-to-cart-btn i {
+      margin-right: 5px;
+    }
+  </style>
+<head>
+
+<body>
+    <div class="card">
+        <img src="{{ imagerecipe }}" alt="Placeholder Image">
+        <div>
+            <div class="container-location">
+                <p class="location"><span id = "value" class="value">{{ name }}</span>  </p>
+            </div>
+            <h6>Serves {{ servingsize }}</h6>
+        </div>
+    </div>
+</body>
+</html>
